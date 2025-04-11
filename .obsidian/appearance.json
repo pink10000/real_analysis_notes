@@ -1,0 +1,9 @@
+{
+  "cssTheme": "Border",
+  "theme": "moonstone",
+  "accentColor": "#a079a0",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
+  "textFontFamily": "",
+  "nativeMenus": true,
+  "enabledCssSnippets": []
+}
