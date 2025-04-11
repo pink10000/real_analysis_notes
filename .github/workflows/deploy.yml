@@ -1,0 +1,68 @@
+name: Deploy MATH 140A Vault
+
+on:
+  push:
+    branches:
+      # IMPORTANT: Change this to the branch you want to trigger deployment
+      # Options: 'main', 'v4', or any other branch name
+      - main
+
+permissions:
+  contents: read # Allow workflow to checkout the MATH 140A repo
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks out the MATH 140A repository code
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        # Fetches Git history; needed if Quartz uses it (e.g., for last modified dates)
+        with:
+          fetch-depth: 0
+
+      # Sets up the Node.js environment required by Quartz
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a version compatible with your Quartz setup
+
+      # Installs Quartz dependencies and builds the static site
+      # Runs these commands inside the ./quartz directory
+      - name: Install Dependencies and Build Quartz
+        run: |
+          npm install
+          npx quartz build
+        working-directory: ./quartz
+
+      # Deploys the built static site to your main website repository
+      - name: Deploy to Main Website Repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Uses the Deploy Key secret you created
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+
+          # IMPORTANT: Replace with YOUR main website repository
+          # Format: your-github-username/your-main-repo-name
+          external_repository: pink10000/pink10000.github.io
+
+          # IMPORTANT: Replace with the deployment BRANCH of your main website
+          # Usually 'gh-pages', but check your main repo's Pages settings
+          publish_branch: main 
+
+          # The folder containing the built Quartz site (relative to repo root)
+          # Should be correct based on your structure and build step
+          publish_dir: ./quartz/public
+
+          # The target subdirectory within the publish_branch
+          destination_dir: ./140a
+
+          # Git committer details for the deployment commit
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+          # Cleans the destination_dir before copying files
+          keep_files: false
+
+          # Commit message for the deployment
+          commit_message: Deploy MATH 140A update ${{ github.sha }}
