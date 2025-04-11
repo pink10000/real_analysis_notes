@@ -26,6 +26,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20' # Use a version compatible with your Quartz setup
+      - name: Check files before install
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Listing root directory:"
+          ls -la
+          echo "Listing quartz directory:"
+          ls -la ./quartz # Check if package.json is listed here
 
       # Installs Quartz dependencies and builds the static site
       # Runs these commands inside the ./quartz directory
