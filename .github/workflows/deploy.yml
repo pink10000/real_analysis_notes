@@ -1,76 +1,49 @@
-name: Deploy MATH 140A Vault
+name: Build Notes and Trigger Main Site Deploy
 
 on:
   push:
     branches:
-      # IMPORTANT: Change this to the branch you want to trigger deployment
-      # Options: 'main', 'v4', or any other branch name
+      # Trigger on push to this branch in your notes repository
       - main
 
 permissions:
-  contents: read # Allow workflow to checkout the MATH 140A repo
+  contents: read # Permissions needed to checkout this repository
 
 jobs:
-  build-and-deploy:
+  build-and-trigger: # Renamed job for clarity
     runs-on: ubuntu-latest
     steps:
-      # Checks out the MATH 140A repository code
+      # Step 1: Checks out your notes repository code
       - name: Checkout Repo
         uses: actions/checkout@v4
-        # Fetches Git history; needed if Quartz uses it (e.g., for last modified dates)
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Keep if Quartz uses Git history
 
-      # Sets up the Node.js environment required by Quartz
+      # Step 2: Sets up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use a version compatible with your Quartz setup
-      - name: Check files before install
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Listing root directory:"
-          ls -la
-          echo "Listing quartz directory:"
-          ls -la ./quartz # Check if package.json is listed here
+          node-version: '20' # Use a version compatible with Quartz
 
-      # Installs Quartz dependencies and builds the static site
-      # Runs these commands inside the ./quartz directory
+      # Step 3: Installs Quartz dependencies and builds the notes site
+      # The built files will be in ./quartz/public (but NOT deployed from here)
       - name: Install Dependencies and Build Quartz
         run: |
           npm install
           npx quartz build
-        working-directory: ./quartz
+        working-directory: ./quartz # Run inside the ./quartz directory
 
-      # Deploys the built static site to your main website repository
-      - name: Deploy to Main Website Repo
-        uses: peaceiris/actions-gh-pages@v3
+      # Step 4: Trigger the deployment workflow in your main Astro site repository
+      # This replaces the old step that tried to push files directly
+      - name: Trigger Astro Site Deployment
+        uses: peter-evans/repository-dispatch@v3 # Using v3
         with:
-          # Uses the Deploy Key secret you created
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
-
-          # IMPORTANT: Replace with YOUR main website repository
-          # Format: your-github-username/your-main-repo-name
-          external_repository: pink10000/pink10000.github.io
-
-          # IMPORTANT: Replace with the deployment BRANCH of your main website
-          # Usually 'gh-pages', but check your main repo's Pages settings
-          publish_branch: main 
-
-          # The folder containing the built Quartz site (relative to repo root)
-          # Should be correct based on your structure and build step
-          publish_dir: ./quartz/public
-
-          # The target subdirectory within the publish_branch
-          destination_dir: ./140a
-
-          # Git committer details for the deployment commit
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-
-          # Cleans the destination_dir before copying files
-          keep_files: false
-
-          # Commit message for the deployment
-          commit_message: Deploy MATH 140A update ${{ github.sha }}
+          # You need to create a Personal Access Token (Classic) with 'repo' scope
+          # Add this PAT as a secret named DISPATCH_PAT in THIS (MATH 140A) repository's Actions secrets
+          token: ${{ secrets.DISPATCH_PAT }}
+          # The target repository (your Astro site)
+          repository: pink10000/pink10000.github.io
+          # A custom name for the event - your Astro workflow must listen for this type
+          event-type: deploy-notes
+          # Optional: You can send data if needed by the Astro workflow
+          # client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
