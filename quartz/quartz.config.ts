@@ -71,7 +71,54 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Latex({ 
+        // for some reason the macros only work when this is katex and not mathjax
+        renderEngine: "katex", 
+        customMacros: {
+          // Sets
+          "\\R": "\\mathbb{R}",
+          "\\N": "\\mathbb{N}",
+          "\\Z": "\\mathbb{Z}",
+          "\\C": "\\mathbb{C}",
+          "\\Q": "\\mathbb{Q}",
+          "\\RQ": "\\R\\backslash\\Q", // Note: Assumes \R is defined above or standard
+          "\\cA": "\\mathcal{A}",
+        
+          // // Statistics
+          "\\var": "\\text{Var}",
+          "\\Binom": "\\text{Binom}",
+          "\\bias": "\\text{Bias}",
+          "\\pois": "\\text{Pois}",
+          "\\Exp": "\\text{Exp}",
+          "\\P": "\\mathbb{P}", // From \renewcommand{\P}
+          "\\Cov": "\\text{Cov}",
+        
+          // Linear Algebra
+          "\\trace": "\\text{trace}",
+        
+          // Abstract Algebra
+          "\\ker": "\\text{Ker }", // From \renewcommand{\ker} - includes space
+          "\\kerphi": "\\text{Ker }\\varphi", // Expanded based on \ker above
+          "\\id": "\\text{Id}",
+          "\\GL": "\\text{GL}",
+          "\\SL": "\\text{SL}",
+        
+          // Analysis
+          "\\Re": "\\text{Re}", // From \renewcommand{\Re}
+          "\\Im": "\\text{Im}", // From \renewcommand{\Im}
+          "\\diam": "\\text{diam}",
+          "\\vepsi": "\\varepsilon",
+          "\\ovl": "\\overline{#1}",
+          "\\unl": "\\underline{#1}",
+        
+          // Calculus
+          "\\del": "\\partial",
+        
+          // Misc
+          "\\notexists": "\\nexists",
+        },
+      
+      }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

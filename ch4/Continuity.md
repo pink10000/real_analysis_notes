@@ -1,11 +1,15 @@
 #ch4 #140A
 # Definition (Point)
 Let $A \subset X$ and $f : A \to Y$. Let $p \in A$. We say $f$ is **continuous** at $p$ if $\forall \vepsi > 0, \exists \delta > 0$ such that $\forall x \in A$ with $d_{X}(x,p) < \delta$ we have $d_{Y}(f(x), f(y)) < \vepsi$ 
+
 $$
+
 (\forall \vepsi > 0)(\exists \delta > 0)
 (\forall x \in A, 0 < d_{X}(x, p) < \delta)
 (d_{Y}(f(x), f(p)) < \vepsi)
+
 $$
+
 
 # Proposition (Isolated implies Continuity)
 If $p$ is an [[Metric Space#Limit Point|isolated point]] of $A$, then any function $f: A \to Y$ is continuous at $p$. 
@@ -15,7 +19,11 @@ $p$ is an isolated point $A$ means that $\exists \delta_{0}> 0$ such that $\fora
 > Since no neighborhoods intersect, there is some "minimal distance" $\delta_{0}$ where there are no points from $0$ to $\delta_{0}$. So, the only point must be itself. 
 
 Let $\vepsi > 0$. Choose $\delta = \delta_{0}$. Then we have 
-$$d(f(x), f(p)) = d(f(p), f(p)) = 0 < \vepsi$$
+
+$$
+d(f(x), f(p)) = d(f(p), f(p)) = 0 < \vepsi
+$$
+
 and so it is continuous. 
 
 # Definition (Set)
@@ -67,51 +75,83 @@ To show $f(K)$ is compact, let $\{O_{\alpha}\}$ be an open cover of $f(K)$.
 > Goal is to show there exists a finite subcover. 
 
 Since we have a cover,
+
 $$
+
 f(K) \subset \bigcup_{\alpha \in I} O_{\alpha}
+
 $$
+
 Take the preimage of this containment. Then 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 f^{-1}(f(K)) 
 &\subset f^{-1}\left( \bigcup_{\alpha \in I} O_{\alpha} \right) \\
 &= \bigcup_{\alpha \in I} f^{-1}(O_{\alpha})
-\end{aligned}$$
+\end{aligned}
+$$
+
 Note $K = f^{-1}(f(K))$. So 
+
 $$
+
 K \subset \bigcup_{\alpha \in I} f^{-1}(O_{\alpha})
+
 $$
+
 Since $f$ is continuous and $O_{\alpha}$ is open, then $f^{-1}(O_{\alpha})$ is *open* by [[Continuity#Proposition (Topological Characterization of Continuity)|lemma]]. So $\{f^{-1}(O_{\alpha}) \mid \alpha \in I\}$ is an open cover of $K$. Since $K$ is compact, $\exists \alpha_{1}, \dots \alpha_{n}$ such that 
-$$K \subset f^{-1}(O_{\alpha_{1}}) \cup \cdots \cup f^{-1}(O_{\alpha_{n}})$$
+
+$$
+K \subset f^{-1}(O_{\alpha_{1}}) \cup \cdots \cup f^{-1}(O_{\alpha_{n}})
+$$
+
 Apply $f$ to this containment, 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 f(K) 
 &\subset f(f^{-1}(O_{\alpha_{1}})) \cup \cdots f(f^{-1}(O_{\alpha_{n}})) \\
 &\subset O_{\alpha_{1}} \cup \cdots \cup O_{\alpha_{n}} 
-\end{aligned}$$
+\end{aligned}
+$$
+
 Thus $f(K)$ has a finite subcover and is [[Compact Sets|compact]] by definition. 
 
 ## Corollary (Extreme Value Theorem)
 Let $X$ be a [[Metric Space|metric space]] that is [[Compact Sets|compact]]. Suppose $f : X \to \R$ is continuous. Then $f$ attains its $\max$ and $\min$. That is, $\exists p,q\in X$ such that 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 f(p) &= \sup\{f(x) \mid x \in X\} = \max\{f(x) \mid x \in X\} \\
 f(q) &= \inf\{f(x) \mid x \in X\} = \min\{f(x) \mid x \in X\}
-\end{aligned}$$
+\end{aligned}
+$$
+
 In particular, if $f:[a,b] \to \R$ is continuous, then $f$ has a $\max,\min$. 
 
 Proof:
 For the second claim, note $[a,b] \subset \R$ is [[Compact Sets|compact]] by [[Heine-Borel Theorem]] so it follows from the first. 
 
 Note that $f(X) \subset \R$ is compact by [[Continuity#Proposition (Continuity Retains Compactness)|theorem]] and so by [[Heine-Borel Theorem]] $f(X)$ is closed and bounded. Then, 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 \sup(f(X)) \in \ovl{f(X)} = f(X) \\
 \inf(f(X)) \in \ovl{f(X)} = f(X) 
-\end{aligned}$$
+\end{aligned}
+$$
+
 So $\exists p, q \in X$ such that $f(p) = \sup f(X)$ and $f(q) = \inf f(X)$. Note that $\sup,\inf$ are in the closure by [[Induced Metric Space#Lemma (Bounded)]]. 
 # Definition (Uniformly Continuous)
 Let $f : X \to Y$. We say $f$ is **Uniformly Continuous** if
+
 $$
+
 (\forall \vepsi > 0)(\exists \delta > 0)(\forall p, q \in X, d(p, q) < \delta) \implies (d(f(p), f(q)) < \vepsi)
+
 $$
+
 - Note that compared to the definition of [[Continuity#Definition (Point)|continuity]], we are saying there is a $\delta$ that "works" for all points in $X$. 
 - In particular, uniformly continuous implies continuous.
 
@@ -122,9 +162,17 @@ Proof:
 Assume by contradiction that $f$ is uniformly continuous. Let $\vepsi = 1$. Then by definition, $\exists \delta > 0$ such that $\forall x, y \in \R, |x - y| < \delta$ and so $|f(x) - f(g)| < 1$.
 
 Fix $x\in \R, x > 0$. Let $y = x + \delta/2$. Then $(x - y) = |x - (x + \delta/2)| = \delta/2 < \delta$. So by uniform continuity, 
-$$|x^{2}- y^{2}| = |x^{2} - (x + \delta/2)^{2}| = |x^{2} - (x^{2}+ \delta x + \delta^{2}/4)| = |\delta x + \delta^{2}/4| = \delta x + \delta^{2}/4 < 1$$
+
+$$
+|x^{2}- y^{2}| = |x^{2} - (x + \delta/2)^{2}| = |x^{2} - (x^{2}+ \delta x + \delta^{2}/4)| = |\delta x + \delta^{2}/4| = \delta x + \delta^{2}/4 < 1
+$$
+
 Let $x = 1/\delta$. Then 
-$$\delta x + \delta^{2}/4 = 1 + \delta^{2}/4 > 1$$
+
+$$
+\delta x + \delta^{2}/4 = 1 + \delta^{2}/4 > 1
+$$
+
 which is a contradiction. 
 
 ## Example 2 
@@ -133,7 +181,9 @@ $f : \mathbb{R}\to \R$ where $x \mapsto x$ is uniformly continuous.
 $f : \R \to \R$ where $x \mapsto \sqrt{x}$ is uniformly continuous.
 
 Proof:
-Let $\vepsi > 0$. Let $\delta = \vepsi^{2}$. $$\begin{aligned}
+Let $\vepsi > 0$. Let $\delta = \vepsi^{2}$. 
+$$
+\begin{aligned}
 |f(x) - f(y)|^{2} 
 &= |\sqrt{x} - \sqrt{y}|^{2} \\
 &= |\sqrt{x} - \sqrt{y}| \cdot |\sqrt{x} - \sqrt{y}| \\
@@ -142,42 +192,68 @@ Let $\vepsi > 0$. Let $\delta = \vepsi^{2}$. $$\begin{aligned}
 &= |x - y|  \\
 &< \delta \\ 
 &= \vepsi^{2}
-\end{aligned}$$Thus, $|f(x)-f(y)| < \vepsi$ . 
+\end{aligned}
+$$
+Thus, $|f(x)-f(y)| < \vepsi$ . 
 ## Example 4 
 $f : [-10, 10] \to \R$ where $x \mapsto x^{2}$ is uniformly continuous. 
 
 Proof: 
 Let $\vepsi > 0$. Then let $\delta = \vepsi/20$. Suppose $|x - y| < \delta$ for $x,y \in [-10, 10]$. Then 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 |f(x) - f(y)|
 &= |x^{2} - y^{2}| \\
 &= |x - y|\cdot |x + y| \\
 &< \delta (|x| + |y|) \\
 &= \delta \cdot 20 \\ 
 &< \vepsi \\
-\end{aligned}$$
+\end{aligned}
+$$
+
 Done.
 # Theorem (Continuity + Compact = Uniform Continuity)
 Let $X$ be a [[Compact Sets|compact]] metric space. Let $f : X \to Y$ continuous. Then $f$ is [[Continuity#Definition (Uniformly Continuous)|uniformly continuous]]. 
 
 Proof:
 Suppose by contradiction that $X$ is *not* uniformly continuous. Then 
+
 $$
+
 (\exists \vepsi_{0} > 0)(\forall \delta = 1/n, \forall n \in \N)(\exists p_{n},q_{n}\in X)(d(p_{n}, q_{n}) < 1/n) \text{ but } 
 d(f(p_{n}), f(q_{n})) \geq \vepsi_{0}
+
 $$
+
 Now since $X$ is *compact*, $(p_{n}) \subset X$, there $\exists$ convergent subsequence $(p_{n_{k}}), p_{n_{k}} \to p$. 
 
 > I claim $q_{n_{k}} \to p$. 
 Proof:  
-This is $\alpha/2$ argument. Let $\alpha > 0$. Choose $K$ large enough so that $$d(p_{n_{k}}, p) < \alpha/2$$
-and $$d(p_{n_{k}}, q_{n_{k}}) < 1/n_{k} < \alpha/2 $$
+This is $\alpha/2$ argument. Let $\alpha > 0$. Choose $K$ large enough so that 
+$$
+d(p_{n_{k}}, p) < \alpha/2
+$$
+
+and 
+$$
+d(p_{n_{k}}, q_{n_{k}}) < 1/n_{k} < \alpha/2 
+$$
+
 for $k \geq K$ which we can do since $p_{n_{k}} \to p$ and by premise + [[Archimedean Property]]. Then $\forall k \geq K$, $d(q_{n_{k}}, p) \leq d(q_{n_{k}}, p_{n_{k}}) + d(p_{n_{k}}, p) < \alpha$ and so they converge to the same point.
 
 Since $f$ is continuous on $X$ and $p \in X$. Then since $p_{n_{k}} \to p$, then 
-$$\lim_{k\to\infty} f(p_{n_{k}}) = f(p)$$
+
+$$
+\lim_{k\to\infty} f(p_{n_{k}}) = f(p)
+$$
+
 by [[Limits of Functions#Lemma (Sequential Characterization of Limits)]]. Indeed, 
-$$q_{n_{k}} \to p \implies f(q_{n_{k}}) \to f(p)$$
+
+$$
+q_{n_{k}} \to p \implies f(q_{n_{k}}) \to f(p)
+$$
+
 So for $K$ large, $d(f(p_{n_{k}}), f(q_{n_{k}})) < \vepsi_{0}$. This is a contradiction. 
 
 # Lemma (Cauchy Test for Uniform Continuity)
@@ -185,7 +261,11 @@ Suppose $f : X \to Y$ is uniformly continuous. Then for every [[Cauchy Sequences
 
 Proof:
 Let $\vepsi > 0$. Since $f$ is uniformly continuous, $\exists \delta > 0$ such that 
-$$\forall p,q \in X, d(p,q) < \delta \implies d(f(p), f(q)) < \vepsi$$
+
+$$
+\forall p,q \in X, d(p,q) < \delta \implies d(f(p), f(q)) < \vepsi
+$$
+
 Given that $(p_{n})\subset X$ is Cauchy, $\exists N \in \N$ such that $\forall n,m\geq N, d(p_{n},p_{m})<\delta$. So since $f$ is uniformly continuous, $\forall n,m \geq N, d(f(p_{n}), f(p_{m})) < \vepsi$ and so $(f(p_{n}))$ is Cauchy. 
 
 ## Example 5
@@ -212,7 +292,11 @@ Consider $f(x) = 1/(x-b)$. Since $b \not\in A$, $f$ is defined and it is continu
 - $f$ is not uniformly continuous. (Prove this)
 
 $(2)$
-Let $$ g(x) = \frac{1}{1 + (x - b)^{2}}$$
+Let 
+$$
+ g(x) = \frac{1}{1 + (x - b)^{2}}
+$$
+
 Note $1 + (x - b)^{2} > 1$. So $g(x) < 1, \forall x \in A$. However since $\exists x_{n} \to b$ we see $\sup\{g(x) \mid x \in A\}$. It is bounded, but max. 
 
 $(3)$
@@ -223,47 +307,79 @@ If $f$ is a continuous mapping of a metric space $X$ into a metric space $Y$, an
 
 Proof:
 Suppose by contradiction that $f(C)$ is separated. Then $f(C) = A \cup B$ where both sets are nonempty. Then, we get 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 f(C) &= A \cup B \\
 C &= f^{-1}(A \cup B) \\
 &= f^{-1} (A) \cup f^{-1}(B)
-\end{aligned}$$
+\end{aligned}
+$$
+
 Let $E = C \cap f^{-1}(A)$ and $F = C \cap f^{-1}(B)$. Note that $C = E \cup F$. Both $E,F$ are empty; otherwise, $f(C) \subset B$, and $A = \emptyset$ a contradiction. 
 
 Since $B \subset \ovl{B}$, then $f^{-1}(B) \subset f^{-1}(\ovl{B})$. As $f$ is continuous and $\ovl{B}$ is closed, by [[Continuity#Proposition (Topological Characterization of Continuity)|theorem]], we have that $f^{-1}(\ovl{B})$ is closed. So 
+
 $$
+
 \ovl{f^{-1}(B)} \subset \ovl{f^{-1}(\ovl{B})} = f^{-1}(\ovl{B})
+
 $$
+
 Then, $F = C \cap f^{-1}(B) \implies F \subset f^{-1}(B)$. Thus, 
+
 $$
+
 \ovl{F} \subset \ovl{f^{-1}(B)} \subset f^{-1}(\ovl{B})
+
 $$
+
 OTOH, $E = C \cap f^{-1}(A) \subset f^{-1}({A})$. Indeed, 
-$$E \cap \ovl{F} \subset f^{-1}(A) \cap f^{-1}(\ovl{B}) = \emptyset$$
+
+$$
+E \cap \ovl{F} \subset f^{-1}(A) \cap f^{-1}(\ovl{B}) = \emptyset
+$$
+
 and similarly for $\ovl{E}\cap F$. Thus, $E,F$ are separated, a contradiction, as $C$ is connected.  
 # Theorem (Continuity + Compact = sup/inf)
 Suppose $f$ is a continuous real function on a [[Compact Sets|compact metric space]] $X$, and 
+
 $$
+
 M = \sup_{p \in X}f(p) \quad\quad\quad m = \inf_{p \in X} f(p)
+
 $$
+
 Then there exists $p,q \in X$ such that $f(p) = M$ and $f(q) = m$. The proof uses [[Heine-Borel Theorem]]. 
 
 # Intermediate Value Theorem
-Let $f$ be a real valued continuous function on $[a,b]$. If for $r$, $$f(a) < r < f(b)$$then $\exists c \in [a,b]$ such that $f(c) = r$. 
+Let $f$ be a real valued continuous function on $[a,b]$. If for $r$, 
+$$
+f(a) < r < f(b)
+$$
+then $\exists c \in [a,b]$ such that $f(c) = r$. 
 
 Proof: 
 WLOG, suppose $f(a) < f(b)$. Let $r \in [f(a), f(b)]$. WLOG, suppose $r \in (f(a), f(b))$. By the [[Continuity#Theorem (Continuity Retains Connectedness)|theorem]], $f([a,b]) \subset \R$ is [[Connected Sets|connected]]. Let $I = f([a,b])$. Since $I$ is an interval, $f(a) \in I, f(b) \in I$ and $f(a) < r < f(b)$. then $r \in I = f([a,b]) \implies r = f(c)$ for some $c \in [a,b]$. 
 
 # Definition (Directional Limits)
 Let $f: (a,b) \to \R$. Let $p \in (a,b)$. We say the **limit from the right** at $p$ equals $\ell$ and write 
+
 $$
+
 \lim_{x \to p^{+}}f(x) = \ell
+
 $$
+
 if
+
 $$
+
 (\forall \vepsi > 0)(\exists \delta > 0)(x \in (a,b), 0 < x - p < \delta)
 \implies (|f(x) - \ell| < \vepsi)
+
 $$
+
 Equivalently, we say $\lim_{x \to p^{+}f(x)}= \ell$ if $\forall (x_{n})$ in $(p,b)$ such that $x_{n}\to p$ we have $f(x_{n}) \to \ell$. This is denoted as $f(p+)$ and $f(p-)$ for the **limit from the left**. 
 
 ## Remark (Equivalent Limit Direction)

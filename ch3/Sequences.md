@@ -8,12 +8,20 @@ A sequence $\{p_{n}\}$ in a [[Metric Space]] $X$ is said to **converge** if ther
 - $\forall \varepsilon > 0,\exists N \in \N, n \geq N, d(p_{n}, p) < \varepsilon$
 
 In this case, $\{p_n\}$ converges to $p$, or that $p$ is the limit of $\{p_n\}$, and we write $p_{n}\to p$ or
-$$\lim_{n \to \infty} p_{n} = p$$
+
+$$
+\lim_{n \to \infty} p_{n} = p
+$$
+
 If $\{p_n\}$ does not converge, then it must diverge.  This sequence depends on the ambient space $X$. 
 
 ## Range
 The set of all the points $p_{n}$ for $(n = 1, 2, 3, \cdots)$ is the **range** of $\{p_{n}\}$. The range of a sequence may be a finite set, or it may be infinite. 
-$$\{p_{n} \mid n \in \N \} \subset X$$
+
+$$
+\{p_{n} \mid n \in \N \} \subset X
+$$
+
 
 The sequence $\{p_n\}_{n \in \N}$ is **bounded** if its range is bounded. 
 
@@ -23,40 +31,68 @@ Let $\{p_{n}\}$ be a sequence in a [[Metric Space]] $X$.
 2. If $p \in X, p' \in X$ and if $\{p_n\}$ converges to $p$ and to $p'$, then $p = p'$. 
 3. If $\{p_{n}\}$ converges, then $\{p_{n}\}$ is bounded
 4. If $E \subset X$ and if $p$ is a limit point of $E$, then there is a sequence $\{p_{n}\}$ in $E$ such that 
-$$p = \lim_{n \to \infty} p_{n}$$
+
+$$
+p = \lim_{n \to \infty} p_{n}
+$$
+
 
 Proof:
 $(1)$
 Suppose $p_{n}\to p$. Then, 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 p_{n}\to p 
 &\iff \forall \varepsilon > 0, \exists n \in \N, \forall n \geq \N, d(p_{n}, p) < \varepsilon \\
 &\iff \forall \varepsilon > 0, \exists n \in \N, \forall n \geq \N, p_{n}\in N_\varepsilon(p) \\
 &\iff \text{all but finitely many of the n's satisfy $p_{n} \in N_{r}(\varepsilon)$}
-\end{aligned}$$
+\end{aligned}
+$$
+
 $(2)$
 Suppose $p_{n}\to p$ and $p_{n}\to q$. Suppose $p \neq q$. Then $d(p, q) > 0$. Let 
-$$\varepsilon = \frac{d(p, q)}{2}$$
+
+$$
+\varepsilon = \frac{d(p, q)}{2}
+$$
+
 - Then since $p_{n}\to p$, then $\exists N_{1} \in \N, \forall n \geq N_{1}$ such that $d(p_{n}, p) < \varepsilon$ 
 - Then since $p_{n}\to q$, then $\exists N_{2} \in \N, \forall n \geq N_{2}$ such that $d(p_{n}, q) < \varepsilon$ 
 Let $N = \max\{N_{1} , N_{2}\}$. Then $\forall n \geq N$, 
-$$d(p, q) \leq d(p, p_{n}) + d(p_{n}, q) < \varepsilon + \varepsilon = 2 \varepsilon = d(p, q)$$
+
+$$
+d(p, q) \leq d(p, p_{n}) + d(p_{n}, q) < \varepsilon + \varepsilon = 2 \varepsilon = d(p, q)
+$$
+
 which is a contradiction. 
 
 $(3)$ Convergence $\implies$ bounded
 Assume $p_{n}\to p$. Let $\varepsilon = \pi^{\sqrt{2}} > 0$. Then $\exists N \in \N$ such that $\forall n \geq N, d(p_{n}, p) < \pi^{\sqrt{2}}$. Let
-$$R_{1}= \max\{d(p_{m}, p) \mid m = 1, \cdots, N - 1\}$$
+
+$$
+R_{1}= \max\{d(p_{m}, p) \mid m = 1, \cdots, N - 1\}
+$$
+
 Now let $R = \max\{R_{1}, \pi^{\sqrt{2}}\} + 1 > 0$ and $\forall n \in \N$, 
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 d(p_{n}, p) < R 
 &\iff p_{n} \in N_{R}(p), \forall n \in \N \\ 
 &\iff \{p_{n}\} \text{ boudned}
-\end{aligned}$$
+\end{aligned}
+$$
+
 $(4)$
 Let $p \in A'$. Then $\forall n \in \N, \exists p_{n}\in N_{1/n}(p) \cap A$. I claim $p_{n}\to p$. Let $\varepsilon > 0$ and let $N \in \N$ be such that $\frac{1}{n} < \varepsilon$ by [[Archimedean Property]]. Then $\forall n \geq N$, 
+
 $$
+
 p_{n}\in N_{1/n}(p) \iff d(p_{n}, p) < \frac{1}{n} \leq \frac{1}{N} < \varepsilon 
+
 $$
+
 > Use the fact that $N_{1/n}(p)$ is nonempty, and so pick a point for all $n \in \N$ to build a sequence.
 
 # Lemma (Algebra of Sequences)
@@ -73,12 +109,24 @@ Let $\{\vec{x}_{n}\}$ be a sequence in $\R^{d}$. Then $\{\vec{x}_{n}\}$ converge
 Let $\{p_n\}$ be a sequence. Suppose $n_{1}< n_{2}< n_{3}< \cdots$ be a set of natural numbers. Then we call $\{p_{n_{i}}\}_{i\in \N}$ a **subsequence** of $p_{n}$. 
 
 Note that 
-$$p_{1}, \ovl p_{2}, \ovl p_{3}, p_{4}, p_{5}\cdots   \quad\implies p_{1}= p_{n_{1}}, \;\; p_{n_{2}} = p_{4},\;\; p_{n_{3}} = p_{5}$$
+
+$$
+p_{1}, \ovl p_{2}, \ovl p_{3}, p_{4}, p_{5}\cdots   \quad\implies p_{1}= p_{n_{1}}, \;\; p_{n_{2}} = p_{4},\;\; p_{n_{3}} = p_{5}
+$$
+
 ## Subsequence Limits
-Let $\{p_{n}\}$ be a sequence. A point $p \in X$ is called a **subsequential limit of $\{p_{n}\}$** if $\exists$ a subsequence $\{p_{n_{i}}\}$ such that $$\lim_{i \to \infty} p_{n_{i}} \to p$$
+Let $\{p_{n}\}$ be a sequence. A point $p \in X$ is called a **subsequential limit of $\{p_{n}\}$** if $\exists$ a subsequence $\{p_{n_{i}}\}$ such that 
+$$
+\lim_{i \to \infty} p_{n_{i}} \to p
+$$
+
 ## Lemma (Structure of Subsequences)
 Let $\{p_{n}\}$ be a sequence. Then 
-$$p_{n}\to p \iff \text{every subsequence converges to $p$}$$
+
+$$
+p_{n}\to p \iff \text{every subsequence converges to $p$}
+$$
+
 $(\impliedby)$
 The full sequence is a subset of itself. Therefore $p_{n}\to p$.
 
@@ -96,9 +144,17 @@ Proof:
 - This is by induction.
 ---
 Thus, for sufficiently large $K$, we have $n_{K}\geq N$ where 
-$$n_{1}< n_{2} < \cdots < N < n_{K} < \cdots $$
+
+$$
+n_{1}< n_{2} < \cdots < N < n_{K} < \cdots 
+$$
+
 now if $k \geq K$, then by [[Sequences#Lemma (Subsequences Stabilize)|stabilizing lemma]], 
-$$n_{k} \geq n_{K}\geq N$$
+
+$$
+n_{k} \geq n_{K}\geq N
+$$
+
 so then $d(p_{n_{k}}, p) < \varepsilon$. 
 
 # Lemma (Bolzano-Weierstrass Theorem)
@@ -134,6 +190,10 @@ Let $\{p_{n}\}$ be a sequence in $(X, d)$. Let $Q$ denote the set of subsequence
 2. If $|a| < 1$, then $\lim_{n\to\infty}a^{n} = 0$
 3. $\lim_{n\to\infty} \sqrt[n]{n} = 1$ 
 4. Let $a > 0$. Then $\lim_{n\to\infty} \sqrt[n]{a} = 1$
-5. Let $p > 0, \alpha \in \R$. Then $$\lim_{n\to\infty} \frac{n^{\alpha}}{(1 + p)^{\alpha}}$$
+5. Let $p > 0, \alpha \in \R$. Then 
+$$
+\lim_{n\to\infty} \frac{n^{\alpha}}{(1 + p)^{\alpha}}
+$$
+
 
 

@@ -13,14 +13,19 @@ Now, we prove AP.
    x   2x  3x           y
 ```
 Suppose for the sake of contradiction, that AP fails. This means $\forall n \in \mathbb{N}, nx \leq y$. So, $y$ is an upper bound for $nx$. Let 
-$$A := \{nx \mid n \in \mathbb{N} \}$$
+$$
+A := \{nx \mid n \in \mathbb{N} \}
+$$
 It is clear $y$ is a upper bound for $A$, and $A$ is bounded above. Then, $A \neq \emptyset$ as $x \in A, 2x \in A$. This, by the [[Fields#Theorem (Completeness of $ mathbb{R}$)|Completeness Axiom]], the $\sup(A)$ exists. Let $a := \sup(A)$. Hence, 
 $$\forall n \in \mathbb{N}, nx \leq a$$
+
 In particular, 
-$$\begin{aligned}
+$$
+\begin{aligned}
 \forall n \in \mathbb{N}, \,& (n + 1)x \leq a \\ 
 \forall n \in \mathbb{N}, \,& nx \leq a - x \\
-\end{aligned}$$
+\end{aligned}
+$$
 Which is a contradiction of the definition of the [[Supremum]] because we have a smaller upper bound. 
 
 ## Corollary ($\Q$ is dense in $\R$)

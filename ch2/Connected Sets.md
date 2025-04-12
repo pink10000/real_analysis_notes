@@ -11,7 +11,11 @@ such that $C$ is an interval.
 ### Proof:
 $(\implies)$
 Suppose $C$ is connected. We want to show that $z \in C$. We prove by contradiction. Suppose $\exists x,y \in C$ and $x < z < y$ but $z \not \in C$. Then 
-$$C = (C \cap (- \infty, z)) \cup (C \cap (z, \infty))$$
+
+$$
+C = (C \cap (- \infty, z)) \cup (C \cap (z, \infty))
+$$
+
 where LHS is $A$ and RHS is $B$. But then $C$ is not connected and thus a contradiction. 
 
 $(\impliedby)$

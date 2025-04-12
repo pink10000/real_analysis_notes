@@ -7,7 +7,11 @@ Let $f : \R \to \R$.
 These are all similar for $-\infty$. 
 
 ## Example 1 
-$$\lim_{x \to 0}(1/x^{2}) = +\infty$$
+
+$$
+\lim_{x \to 0}(1/x^{2}) = +\infty
+$$
+
 Proof: 
 Let $M \in \R$. Need to find $\delta > 0$ such that $0 < |x - 0| < \delta$ we have $1/x^{2} > 0$. 
 1. $0 < |x| < \delta \implies 1/x^{2}> 1/\delta^{2}$

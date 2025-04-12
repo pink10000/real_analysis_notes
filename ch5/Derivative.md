@@ -36,22 +36,26 @@ h'(x) = g'(f(x)) \cdot f'(x)
 $$
 Proof:
 Let $y = f(x)$. By definition of the derivative, 
-$$\begin{aligned}
+$$
+\begin{aligned}
 f(t) - f(x) &= (t - x)[f'(x) + u(t)] \\
 g(s) - g(y) &= (s - y)[g'(y) + v(s)] \\
-\end{aligned}$$
+\end{aligned}
+$$
 where $t \in [a,b]$, $s \in I$ and 
 - $u(t) \to 0$ as $t \to x$
 - $v(s)\to 0$ as $s \to y$
 > Note that $u,v$ are functions to indicate the "remainder" as $t \to x$. 
 
 Let $s = f(t)$. Using the equations above, 
-$$\begin{aligned}
+$$
+\begin{aligned}
 h(t) - h(x)
 &= g(f(t)) - g(f(x)) \\
 &= [f(t) - f(x)] \cdot [g'(y) + v(s)] \\ 
 &= (t - x) \cdot [f'(t) + u(t)] \cdot [g'(y) + v(s)]
-\end{aligned}$$
+\end{aligned}
+$$
 or, if $t \neq x$, then 
 $$
 \frac{h(t) - h(x)}{t - x} = [g'(y) + v(s)] \cdot [f'(x) + u(t)]
@@ -133,7 +137,9 @@ Hence $g$ attains a minimum on $[a,b]$ at some point $a < x < b$ by [[Continuity
 
 # Higher Derivatives
 If $f$ has a derivative $f'$ on an interval, and if $f'$ is itself differentiable, we denote the derivative $f'$ by $f''$ and call $f''$ the **second derivative** of $f$. Continuing, we get
-$$f, f', f'', f^{(3)}, \cdots, f^{(n)}$$
+$$
+f, f', f'', f^{(3)}, \cdots, f^{(n)}
+$$
 each one a derivative of the previous one. In order for $f^{(n)}(x)$ to exist at a point $x$, 
 1. $f^{(n-1)}(t)$  must exist in a neighborhood of $x$ 
 2. $f^{(n-1)}$ must be differentiable at $x$ 

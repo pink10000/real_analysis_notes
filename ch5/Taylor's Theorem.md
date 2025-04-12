@@ -18,9 +18,8 @@ For $n = 1$, this is just the [[Derivative#Theorem (Weak Mean Value Theorem)]]. 
 
 Proof:
 Let $M$ be defined by
-$$\begin{equation}
+$$
 f(\beta) = P(\beta) + M(\beta - \alpha)^{n}
-\end{equation}
 $$
 and put 
 $$
@@ -30,11 +29,13 @@ We have to show that $M = f^{(n)}(x)/n!$ for some $x$ between $\alpha$ and $\bet
 > Recall that Taylor's Theorem is a sum. So we need to find that the next element is possible. Note that $g$ is defined this way so that $g(\alpha) = g(\beta) = 0$. 
 > - $g(\beta) = 0$ since rearranging the definition of $M$ is the same as $g(\beta)$ and it is equal to $0$. 
 > - $g(\alpha) = 0$ since the second term is $P(\alpha) = f(\alpha)$. 
->   $$P(\alpha) 
-   = \sum_{k=0}^{n=1} \frac{f^{(k)}(\alpha)}{k!}(\alpha - \alpha)^{k} 
-   = \frac{f^{(0)}(\alpha)}{0!}(\alpha - \alpha)^{0} + \sum_{k=1}^{n-1}0^{k}
-   = f(\alpha)$$
-   and $g(\alpha) = f(\alpha) - f(\alpha) - 0 = 0$. 
+>   $$
+>   P(\alpha) 
+>   = \sum_{k=0}^{n=1} \frac{f^{(k)}(\alpha)}{k!}(\alpha - \alpha)^{k} 
+>   = \frac{f^{(0)}(\alpha)}{0!}(\alpha - \alpha)^{0} + \sum_{k=1}^{n-1}0^{k}
+>   = f(\alpha)
+>   $$
+>   and $g(\alpha) = f(\alpha) - f(\alpha) - 0 = 0$. 
 
 By the original definition and the equation above, 
 $$

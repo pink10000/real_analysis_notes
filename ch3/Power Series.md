@@ -1,21 +1,33 @@
 #ch3 #140A
 # Definition 
 Given a [[Sequences|sequence]] $\{c_{n}\}$ of [[Complex Numbers]], the [[Series]], 
+
 $$
+
 \sum_{n=0}^{\infty} c_{n}z^{n}
+
 $$
+
 is called a **power series**. The numbers $c_{n}$ are the coefficients of the series, and $z\in \C$. Depending on the choice of $z$ this power series will converge or diverge. 
 
 # Radius of Convergence
 Given the power series $\sum c_{n}z^{n}$ put 
-$$\alpha = \limsup_{n\to\infty}\sqrt[n]{|c_{n}|} \quad\quad\quad R = \frac{1}{\alpha}$$
+
+$$
+\alpha = \limsup_{n\to\infty}\sqrt[n]{|c_{n}|} \quad\quad\quad R = \frac{1}{\alpha}
+$$
+
 Where if $\alpha = 0$ then $R = +\infty$ and $\alpha = +\infty$ then $R = 0$. Then $\sum c_{n}z^{n}$ **converges** if $|z| < R$ and **diverges** if $|z| > R$. 
 
 Proof:
 Let $a_{n}= c_{n}z^{n}$, and apply [[Series#Proposition (Root Test)|root test]]: 
+
 $$
+
 \limsup_{n\to\infty} \sqrt[n]{|a_{n}|} = |z| \limsup \sqrt[n]{|c_{n}|} = \frac{|z|}{R}
+
 $$
+
 and $R$ is the radius of convergence. 
 
 ## Special Radii 

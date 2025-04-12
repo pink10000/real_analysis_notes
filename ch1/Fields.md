@@ -1,10 +1,12 @@
 #ch1 #140A
 # Definition
 A **field** is a set $F$ together with two operations, $(+)$ and $(\cdot)$. That is,
-$$\begin{aligned}
+$$
+\begin{aligned}
 + &: F \times F \to F && (a, b) \mapsto a + b \\
 \cdot &: F \times F \to F && (a,b) \mapsto a \cdot b \\
-\end{aligned}$$
+\end{aligned}
+$$
 These operations satisfy
 - Addition axioms
 - Multiplication axioms

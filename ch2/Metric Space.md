@@ -1,7 +1,11 @@
 #ch2 #140A
 # Definition
 Let $X$ be a nonempty set. A **metric** on $X$ is a function 
-$$d : X \times X \to \R$$
+
+$$
+d : X \times X \to \R
+$$
+
 that satisfies the following:
 1. (*Identity of the Indiscernibles*): $\forall p \neq q, d(p, q) > 0$ and $d(p, p) = 0$
 2. (*Symmetry*): $\forall p, q \in X, d(p, q) = d(q, p)$
@@ -22,22 +26,42 @@ We call $(X, d)$ a **metric space**. Sometimes $X$ is called a space and the ele
 A **cell** or **box** in $\R^n$ is a Cartesian product of intervals in $\R^{n}$. Open cells come from open intervals and closed cells come from closed intervals.
 ## Convexity
 Let $A \subset \R^{n}$ and $A \neq \emptyset$. We say $A$ is **convex** if the following holds: if $\forall p,q \in A$ the line segment $\ovl{pq} \subseteq A$ is entirely contained in $A$. That is, for all $t \in [0,1]$:
-$$(1 - t)p + tq \in A$$
+
+$$
+(1 - t)p + tq \in A
+$$
+
 #  Open & Closed
 A **open** ball $B$ is a set with center $x$ and radius $r$ where
-$$B := \{ y \in \R^{k} \mid |y - x| < r \}$$
+
+$$
+B := \{ y \in \R^{k} \mid |y - x| < r \}
+$$
+
 A **closed** ball $C$ is a set with a center $x$ and radius $r$ where
-$$C := \{y \in \R^{k} \mid |y - x| \leq r\}$$
+
+$$
+C := \{y \in \R^{k} \mid |y - x| \leq r\}
+$$
+
 The set $E \subset \R^{k}$ is **convex** if 
-$$\lambda x + (1 - \lambda)y \in E$$
+
+$$
+\lambda x + (1 - \lambda)y \in E
+$$
+
 whenever $x,y \in E$ and $0 < \lambda < 1$. For example, the *balls are convex*. For if $|y - x| <r, |z -x| < r$ and $\lambda \in (0, 1)$, we have
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 |\lambda x + (1 - \lambda)z - x| 
 &= |\lambda(y - x) + (1 - \lambda)(z - x)| \\
 &\leq \lambda|y - x| + (1 - \lambda)|z - x| \\
 &< \lambda r + (1 - \lambda)r \\
 &= r
-\end{aligned}$$
+\end{aligned}
+$$
+
 This is also true for closed balls. 
 
 ## As subsets of a Metric Space $X$
@@ -55,9 +79,17 @@ This is also true for closed balls.
 A **neighborhood** of $p$ is a set $N_{r}(p)$ consisting of all $q$ such that $d(p, q)< r$ for some $r > 0$. The number $r$ is called the **radius** of $N_{r}(p)$.
 ## Theorem (Open Neighborhood)
 Every neighborhood is an open set. Consider a neighborhood $E = N_{r}(p)$ and let $q$ be any point of $E$. Then there is a positive real number $h$ such that 
-$$d(p, q) = r - h$$
+
+$$
+d(p, q) = r - h
+$$
+
 For all points $s$ such that $d(p,q)<h$, we have then 
-$$d(p,s)\leq d(p,q) + d(q, s) < r - h + h = r$$
+
+$$
+d(p,s)\leq d(p,q) + d(q, s) < r - h + h = r
+$$
+
 so that $s \in E$. Thus $q$ is an interior point of $E$. 
 - The second inequality is from the Triangle Inequality of it being a [[Metric Space]]. 
 
@@ -65,8 +97,16 @@ so that $s \in E$. Thus $q$ is an interior point of $E$.
 Let $A \subset X$ and $p \in X$ be a limit point of $A$. Then $\forall r > 0, N_{r}(p) \cap A$ is infinite.
 ### Proof:
 We prove by contradiction. Suppose there exists $r > 0$ such that $N_{r}(p) \cap A$ is finite. Let $\{q_{1}, \cdots q_{n}\}$ be this finite set except if $p \in A$. Now, $\forall i = 1, \cdots n$, $q_{i} \neq p$. So, 
-$$0 < d(p, q_{i}) < r$$
-for $q_{i}\in N_{r}(p)$ and $q_{i}\neq p$. Let $s = \min\{d(p, q_{i} \mid i = 1, \cdots n\} > 0$. Now we claim there does not exist $q \in A \cap N_{s}(p)$ with $q \neq p$. Indeed, $0 < s = \min\{d(p, q_{i}) \mid i = 1, \cdots n\} < r$. So $N_{s}(p) \subset N_{r}(p)$. However, $$\{q_{1}, \cdots q_{n}\} = A \cap (N_{r}(p) \backslash \{p\})$$
+
+$$
+0 < d(p, q_{i}) < r
+$$
+
+for $q_{i}\in N_{r}(p)$ and $q_{i}\neq p$. Let $s = \min\{d(p, q_{i} \mid i = 1, \cdots n\} > 0$. Now we claim there does not exist $q \in A \cap N_{s}(p)$ with $q \neq p$. Indeed, $0 < s = \min\{d(p, q_{i}) \mid i = 1, \cdots n\} < r$. So $N_{s}(p) \subset N_{r}(p)$. However, 
+$$
+\{q_{1}, \cdots q_{n}\} = A \cap (N_{r}(p) \backslash \{p\})
+$$
+
 and $d(p, x) < s \implies x \neq q_{i}, \forall i$. Therefore $N_{s}(p) \cap A$ does not contain any $q \neq p$ and contradicts with the fact that $p$ is a limit point.  
 
 ## Corollary (No Limits in Finite Sets)
@@ -104,13 +144,25 @@ Suppose $A^{c}$ is closed. Let $x \in A$. Then $x \not\in A^{c} \implies x$ is n
 2. "Arbitrary" means we can have any kind of union (infinite, [[Cardinality|uncountably infinite]], 3) sets.
    
    Let $\{\theta_{\alpha} \mid \alpha \in I\}$ be a collection of open sets. Put 
-   $$\theta = \bigcup_{\alpha \in I} \theta_{\alpha}$$
+   
+$$
+\theta = \bigcup_{\alpha \in I} \theta_{\alpha}
+$$
+
    If $\theta$ is empty, then we are done. Suppose not. Let $p \in \theta$. We want to show that $p$ is an interior point such that $\exists r > 0, N_{r}(p) \subset \theta$. Since $p \in\theta$ then $\exists \alpha \in I$ such that $p \in \theta_{\alpha}$. But by assumption, $\theta_{\alpha}$ is open, such that $\exists r >0, N_{r}(p) \subset \theta_{\alpha} \subset \bigcup_{\alpha \in I}\theta_{\alpha} = \theta$. Indeed, $N_{r}(p) \subset \theta$ and $p$ is an interior point of $\theta$.
 3. Consider $\{F_{\alpha}\mid \alpha \in I\}$ a collection of closed sets. We can show that $\bigcap_{\alpha \in I} F_{\alpha}$ is closed if the union is open. Indeed:
-   $$\left( \bigcap_{\alpha \in I} F_{\alpha} \right)^{c} = \bigcup_{\alpha \in I}F_{\alpha}^{c}$$
+   
+$$
+\left( \bigcap_{\alpha \in I} F_{\alpha} \right)^{c} = \bigcup_{\alpha \in I}F_{\alpha}^{c}
+$$
+
    by DeMorgan's Law. Note, $\forall \alpha \in I$, since $F_\alpha$ is closed, then $F_{\alpha}^{c}$ is open. Indeed, by $(2)$ then the complement is open and thus the intersection is closed. 
 4. Suppose $(O_{i})^{n}_{i = 1}$ is a finite collection of open sets. We want to show:
-   $$O := \bigcap_{i=1}^{n}O_{i}$$
+   
+$$
+O := \bigcap_{i=1}^{n}O_{i}
+$$
+
    is open. Let $x \in O$. We WTS $x$ is an interior point. So, $x \in O_{i}$ for all $i$. Hence, $O_{i}$ is open such that $\exists r_{i}> 0$ such that $N_{r_{i}}(X) \subset O_{i}$. 
    
    Let $r = \min\{r_{i} \mid i = 1, \cdots, n\}$. Because the set of radii is finite, $r > 0$. Then $\forall i = 1, \cdots n$ we have $N_{r}(x) \subset N_{r}(x) \subset \theta_{i}$. Thus $N_{r}(x) \subset \bigcap_{i=1}^{n} O_{i} = O$. 

@@ -13,9 +13,13 @@ An ordered set $A$ need not be $A \subset \mathbb{R}$.
 	- Thus, $(0, 1) < (0, 2)$. 
 
 # Notation
-$$x \leq y$$
+$$
+x \leq y
+$$
 means $x < y \vee x = y$. 
-$$x > y$$
+$$
+x > y
+$$
 means $y < x$. 
 
 
