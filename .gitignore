@@ -7,3 +7,4 @@ tsconfig.tsbuildinfo
 .quartz-cache
 private/
 .replit
+.obsidian/workspace.json
