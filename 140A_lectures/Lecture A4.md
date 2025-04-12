@@ -1,3 +1,6 @@
+---
+order: 4
+---
 #Lecture #140A
 
 [[Complex Numbers#Cauchy-Schwarz Inequality]]

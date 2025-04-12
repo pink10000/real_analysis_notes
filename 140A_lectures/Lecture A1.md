@@ -1,3 +1,6 @@
+---
+order: 1
+---
 #Lecture #140A
 - [[Ordered Sets]]
 - [[Fields]]

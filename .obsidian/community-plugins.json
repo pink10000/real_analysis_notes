@@ -6,5 +6,7 @@
   "obsidian-latex",
   "better-word-count",
   "nlp",
-  "graph-analysis"
+  "graph-analysis",
+  "obsidian42-brat",
+  "advanced-exclude"
 ]

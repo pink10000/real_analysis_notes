@@ -78,7 +78,21 @@ const config: QuartzConfig = {
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
-      Plugin.FolderPage(),
+      Plugin.FolderPage({
+        sort: (a, b) => {
+            const orderA = a.frontmatter?.tags?.find(tag => tag.startsWith("order:"))?.split(":")[1] as number | undefined ?? Infinity;
+            const orderB = b.frontmatter?.tags?.find(tag => tag.startsWith("order:"))?.split(":")[1] as number | undefined ?? Infinity;
+            
+            if (orderA !== orderB) {
+              return orderA - orderB; // Ascending numerical sort
+            }
+ 
+            // Fallback sort: if order is the same or missing, sort by file path
+            const titleA = a.filePath ?? ""; // Use filePath as fallback key
+            const titleB = b.filePath ?? "";
+            return titleA.localeCompare(titleB, undefined, { numeric: true, sensitivity: 'base' });
+          }
+      }),
       Plugin.TagPage(),
       Plugin.ContentIndex({
         enableSiteMap: true,

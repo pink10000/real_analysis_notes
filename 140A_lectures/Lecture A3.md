@@ -1,3 +1,6 @@
+---
+order: 3
+---
 #Lecture #140A
 
 [[Archimedean Property]]
