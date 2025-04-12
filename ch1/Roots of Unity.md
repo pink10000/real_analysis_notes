@@ -1,4 +1,8 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
 # Theorem ($n$th Roots)
 For every $x > 0, x \in \R$, and any $n \in \N,$ there exists a unique $y > 0, y \in \R$ such that $y^{n}= x$. 
 

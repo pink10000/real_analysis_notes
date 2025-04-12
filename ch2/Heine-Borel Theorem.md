@@ -1,4 +1,8 @@
-#ch2 #140A
+---
+tags:
+  - 140A
+  - ch2
+---
 This is **compactness criterion for subsets of $\R^n$** . 
 
 # Theorem 

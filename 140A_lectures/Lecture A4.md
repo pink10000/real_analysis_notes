@@ -1,7 +1,10 @@
 ---
 order: 4
+tags:
+  - Lecture
+  - 140A
 ---
-#Lecture #140A
+
 
 [[Complex Numbers#Cauchy-Schwarz Inequality]]
 [[Euclidean Space]] 

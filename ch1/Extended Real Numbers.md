@@ -1,4 +1,8 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
 # Definition
 We define the **extended real number line** to be
 $$

@@ -1,4 +1,9 @@
-#ch1 #140A
+---
+tags:
+  - ch1
+  - 140A
+---
+
 # Functions
 If $A,B$ are non empty sets, then a function is an association of $A$ to $B$ denoted as 
 $$f : A \to B$$

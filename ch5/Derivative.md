@@ -1,4 +1,8 @@
-#140B #ch5
+---
+tags:
+  - 140B
+  - ch5
+---
 # Definition 
 Let $f$ be defined (and real-valued) on $[a,b]$. For any $x \in [a,b]$ for the quotient 
 $$

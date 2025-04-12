@@ -1,5 +1,8 @@
 ---
 order: 11
+tags:
+  - Lecture
+  - 140A
 ---
-#Lecture #140A
+
 [[Sequences]]

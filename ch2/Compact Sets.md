@@ -1,4 +1,8 @@
-#ch2 #140A
+---
+tags:
+  - 140A
+  - ch2
+---
 # Open Cover
 The **open cover** of a set $E$ in a [[Metric Space]] $X$ is the collection $\{G_{\alpha}\}$ of open subsets of $X$ such that $E \subset \bigcup_{\alpha} G_{\alpha}$ 
 - think of it as "covering" a set with open subsets

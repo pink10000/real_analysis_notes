@@ -1,4 +1,8 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
 # Definition
 Set $B\subset A$ where $(A, <)$ is an ordered set has an infimum $\alpha$ if
 1. $B \neq \emptyset$

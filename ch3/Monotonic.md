@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Monotonically Increasing
 A [[Sequences|sequence]] of real numbers $\{p_{n}\}$ is called **monotonically increasing** if $\forall n \in \N, p_{n} \leq p_{n+1}$. 
 - $p_{1}\leq p_{2}\leq p_{3}\leq \cdots$ 

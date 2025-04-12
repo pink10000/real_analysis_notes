@@ -1,4 +1,8 @@
-#ch4 #140A
+---
+tags:
+  - 140A
+  - ch4
+---
 # Definition 
 Let $A \subset X$. Then 
 

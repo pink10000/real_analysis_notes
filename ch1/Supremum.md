@@ -1,4 +1,8 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
 Let $A$ be an ordered set and $B \subset A, B \neq \emptyset$, and bounded above. If there exists $a \in A$ such that
 1. $a$ is an [[Ordered Sets#Bounded Above|upper bound]] for $B$
 2. $\forall c \in A, c < a, \exists b \in B, c < b$. Then we say $B$ has the **least upper bound property**, and $a$ is called the **least upper bound** of $B$. Or,

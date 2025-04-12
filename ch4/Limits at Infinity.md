@@ -1,4 +1,8 @@
-#ch4 #140A
+---
+tags:
+  - 140A
+  - ch4
+---
 # Definition
 Let $f : \R \to \R$. 
 1. $\lim_{x \to \infty} f(x) = \ell$ if $\exists \ell \in R$ such that $\exists \ell \in \R, \forall \vepsi > 0, \exists m \in \R$ such that $x > M$, then $|f(x) - \ell| < \vepsi$.

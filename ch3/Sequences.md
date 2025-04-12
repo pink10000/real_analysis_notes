@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Sequence 
 A **sequence** is a function $p : \N \to X$. 
 

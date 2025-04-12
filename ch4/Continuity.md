@@ -1,4 +1,8 @@
-#ch4 #140A
+---
+tags:
+  - 140A
+  - ch4
+---
 # Definition (Point)
 Let $A \subset X$ and $f : A \to Y$. Let $p \in A$. We say $f$ is **continuous** at $p$ if $\forall \vepsi > 0, \exists \delta > 0$ such that $\forall x \in A$ with $d_{X}(x,p) < \delta$ we have $d_{Y}(f(x), f(y)) < \vepsi$ 
 

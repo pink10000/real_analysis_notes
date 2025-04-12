@@ -1,5 +1,8 @@
 ---
 order: 14
+tags:
+  - Lecture
+  - 140A
 ---
-#Lecture #140A
+
 [[Series]]

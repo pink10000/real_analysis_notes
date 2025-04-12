@@ -1,4 +1,8 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
 Let $n \in \N$ and define 
 $$
 \R^{n} = \{(x_{1}, \cdots, x_{n} \mid x_{j}\in \R\}

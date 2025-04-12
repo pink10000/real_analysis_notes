@@ -1,4 +1,8 @@
-#140B #ch5 
+---
+tags:
+  - 140B
+  - ch5
+--- 
 # Theorem (Taylor's Theorem)
 Suppose 
 - $f$ is a real function on $[a,b]$

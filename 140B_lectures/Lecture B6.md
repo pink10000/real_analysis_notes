@@ -1,5 +1,8 @@
 ---
 order: 6
+tags:
+  - Lecture
+  - 140B
 ---
-#Lecture #140B
+
 [[L'Hopital's Rule]]

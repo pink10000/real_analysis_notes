@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Definition 
 Let $(a_{n})$ be a [[Sequences|sequence]] of [[Complex Numbers]]. Let 
 

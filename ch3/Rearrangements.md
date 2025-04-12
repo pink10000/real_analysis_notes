@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Definition 
 Let $\{k_{n}\}$ be a sequence in which every positive integer appears once and only once. Suppose $r : \mathbb{N}\to \mathbb{N}$, a bijection. Putting
 

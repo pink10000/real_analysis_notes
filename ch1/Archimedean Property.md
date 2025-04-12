@@ -1,4 +1,9 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
+
 $$\text{I can get arbitrary large natural numbers.}$$
 Let $x \in \mathbb{R}, x > 0$. Then $\forall y \in \mathbb{R}, \exists n \in \mathbb{N}$ such that $nx > y$. 
 

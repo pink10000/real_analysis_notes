@@ -1,7 +1,10 @@
 ---
 order: 2
+tags:
+  - Lecture
+  - 140A
 ---
-#Lecture #140A
+
 January 9, 2025
 
 # Lemma

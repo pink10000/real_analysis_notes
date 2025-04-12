@@ -1,4 +1,8 @@
-#ch1 #140A
+---
+tags:
+  - 140A
+  - ch1
+---
 # Definition
 A **field** is a set $F$ together with two operations, $(+)$ and $(\cdot)$. That is,
 $$

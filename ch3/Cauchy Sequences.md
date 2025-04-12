@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Cauchy Sequences
 Let $(X, d)$ be a [[Metric Space]]. A [[Sequences|sequence]] $\{p_{n}\}$ in $X$ is called a **Cauchy Sequence** if 
 

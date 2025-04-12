@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Definition 
 Let $(X, d)$ be a [[Metric Space]] and let $\emptyset \neq Y \subset X$. Then $(Y, d|_{Y})$ is a metric space. Indeed the axioms for a metric space hold in the subset.
 

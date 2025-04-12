@@ -1,4 +1,8 @@
-#ch3 #140A
+---
+tags:
+  - 140A
+  - ch3
+---
 # Definition 
 Given a [[Sequences|sequence]] $\{c_{n}\}$ of [[Complex Numbers]], the [[Series]], 
 

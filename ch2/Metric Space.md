@@ -1,4 +1,8 @@
-#ch2 #140A
+---
+tags:
+  - 140A
+  - ch2
+---
 # Definition
 Let $X$ be a nonempty set. A **metric** on $X$ is a function 
 
