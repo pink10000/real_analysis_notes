@@ -92,7 +92,7 @@ $$
 $$
 and $f'(x) \leq 0$. Hence $f'(x) = 0$. 
 
-# Theorem (Strong Mean Value Theorem)
+# Theorem (Cauchy Mean Value Theorem)
 If $f,g$ are [[Continuity|continuous]] real functions on $[a, b]$ which are differentiable in $(a, b)$, then there is a point $x \in (a, b)$ at which 
 $$
 [f(b) - f(a)]g'(x) = [g(b) - g(a)]f'(x)
@@ -109,19 +109,19 @@ $$
 h(a) = f(b)g(a) - f(a)g(b) = h(b)
 $$
 WTS that $h'(x) = 0$ for some $x \in (a, b)$. If $h$ is constant, then this is true for every $x \in (a, b)$. If $h(t) > h(a)$ for some $t \in (a,b)$, then let $x \in [a,b]$ that attains the maximum. By [[Derivative#Theorem (Local Maxima have Zero-Derivatives)|theorem]], $h'(x) = 0$. The same argument applies for the minimum. 
-# Theorem (Weak Mean Value Theorem)
+# Theorem (Lagrange Mean Value Theorem)
 If $f$ is a real continuous function on $[a,b]$ which is differentiable in $(a,b)$, then there is a point $x \in (a,b)$ at which 
 $$
 f(b) - f(a) = (b - a)f'(x)
 $$
-Proof: Take $g(x) = x$ in [[Derivative#Theorem (Strong Mean Value Theorem)]]. 
+Proof: Take $g(x) = x$ in [[Derivative#Theorem (Cauchy Mean Value Theorem)]]. 
 # Theorem (Derivative Monotonicity)
 Suppose $f$ is differentiable in $(a,b)$.
 1. If $\forall x \in (a,b), f'(x) \geq 0$ then $f$ is [[Monotonic|monotonically]] increasing.
 2. If $\forall x \in (a,b), f'(x) = 0$ then $f$ is constant. 
 3. If $\forall x \in (a, b), f'(x) \leq 0$ then $f$ is [[Monotonic|monotonically]] decreasing.
 
-Proof: Use [[Derivative#Theorem (Weak Mean Value Theorem)]]. 
+Proof: Use [[Derivative#Theorem (Lagrange Mean Value Theorem)]]. 
 # Theorem (Darboux's Theorem)
 Suppose $f$ is a real differentiable function on $[a,b]$ and suppose 
 $$
@@ -148,4 +148,3 @@ each one a derivative of the previous one. In order for $f^{(n)}(x)$ to exist at
 1. $f^{(n-1)}(t)$  must exist in a neighborhood of $x$ 
 2. $f^{(n-1)}$ must be differentiable at $x$ 
 3. Since $f^{(n-1)}$ must exist in a neighborhood of $x$, $f^{(n-2)}$ must be differentiable in that neighborhood and so on.
-

@@ -4,7 +4,6 @@ tags:
   - Lecture
   - 140A
 ---
-
 - [[Ordered Sets]]
 - [[Fields]]
 - The Real Field

@@ -2,7 +2,7 @@
 tags:
   - 140B
   - ch5
---- 
+---
 # Theorem (Taylor's Theorem)
 Suppose 
 - $f$ is a real function on $[a,b]$
@@ -18,7 +18,7 @@ Then there exists a point $x$ between $\alpha$ and $\beta$ such that
 $$
 f(\beta) = P(\beta) + \frac{f^{(n)}(x)}{n!}(\beta - \alpha)^{n}
 $$
-For $n = 1$, this is just the [[Derivative#Theorem (Weak Mean Value Theorem)]]. In general, the theorem shows that $f$ can be approximated by a polynomial of degree $n - 1$, and that the second equation allows us to estimate the *error* if we know bounds on $|f^{(n)}(x)|$.
+For $n = 1$, this is just the [[Derivative#Theorem (Lagrange Mean Value Theorem)]]. In general, the theorem shows that $f$ can be approximated by a polynomial of degree $n - 1$, and that the second equation allows us to estimate the *error* if we know bounds on $|f^{(n)}(x)|$.
 
 Proof:
 Let $M$ be defined by
