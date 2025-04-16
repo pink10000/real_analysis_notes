@@ -115,6 +115,10 @@ $$
 f(b) - f(a) = (b - a)f'(x)
 $$
 Proof: Take $g(x) = x$ in [[Derivative#Theorem (Cauchy Mean Value Theorem)]]. 
+
+## Remark (Rolle's Theorem)
+This is a special case of the MVT when $f(a) = f(b)$. So, $\exists c \in (a, b)$ where $f'(c) = 0$. 
+
 # Theorem (Derivative Monotonicity)
 Suppose $f$ is differentiable in $(a,b)$.
 1. If $\forall x \in (a,b), f'(x) \geq 0$ then $f$ is [[Monotonic|monotonically]] increasing.

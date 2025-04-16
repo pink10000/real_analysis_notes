@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch5/L'Hopital's Rule.md",
-                "mode": "source",
+                "file": "ch5/Derivative.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L'Hopital's Rule"
+              "title": "Derivative"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "Derivative"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -89,7 +88,8 @@
               "title": "Files"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -291,15 +291,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b8daa0a7bb5515fe",
+  "active": "f33640d00654a160",
   "lastOpenFiles": [
     "ch5/L'Hopital's Rule.md",
+    "ch5/Derivative.md",
     "ch4/Continuity.md",
     "ch5/Vector-Valued Derivatives.md",
     "140B_lectures/Lecture B6.md",
     "ch5/Taylor's Theorem.md",
     "140B_lectures/Lecture B4.md",
-    "ch5/Derivative.md",
     "ch3/Sequences.md",
     "ch3/Series.md",
     "140A_lectures/Lecture A1.md",
