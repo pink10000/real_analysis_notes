@@ -35,8 +35,7 @@
               "title": "Lecture B7"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -293,10 +292,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "76089a999ce92eb5",
+  "active": "e0a9377dd6af5b8e",
   "lastOpenFiles": [
-    "Pasted image 20250421125627.png",
     "140B_lectures/Lecture B7.md",
+    "Pasted image 20250421125627.png",
     "ch6/Riemann-Stieltjes Integral.md",
     "ch6/Measure.md",
     "ch4/Limits at Infinity.md",
