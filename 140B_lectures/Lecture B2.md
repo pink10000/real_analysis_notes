@@ -4,3 +4,5 @@ tags:
   - Lecture
   - 140B
 ---
+[[Continuity]]
+[[Derivative]]
