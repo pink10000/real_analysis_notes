@@ -127,7 +127,7 @@ $$
 Proof: Since this is essentially comparing the [[Infimum]] and [[Supremum]], this follows from [[#Proposition (Separate Partition Limits)]]. 
 
 # Lemma (Riemann-Stieltjes Integrability)
-We say $f$ is Riemann-Stieltjes Integral iff $\forall \vepsi > 0, \exists P$ such that $U(P, f, \alpha) - L(P, f, \alpha) < \vepsi$ for partition $P$. 
+We say $f$ is Riemann-Stieltjes Integral iff $\forall \vepsi > 0, \exists$ partition $P$ such that $U(P, f, \alpha) - L(P, f, \alpha) < \vepsi$.
 
 Proof:
 $(\implies)$. If Riemann-Stieltjes integrable, then $\ovl{\int} = \underline{\int}$. Then for $\vepsi/2, \exists P$ such that 
@@ -208,6 +208,43 @@ $$
 # Proposition (Composition of Integrable is Integrable)
 If $g$ is continuous and $f$ is Riemann-Stieltjes Integrable, and $g \circ f$ is well defined, then $g \circ f$ is integrable. 
 
+# Properties of the Integral 
+1. If $f_{1}, f_{2} \in \mathscr{R}(\alpha)$ on $[a,b]$ then $f_{1}+ f_{2} \in \mathscr{R}(\alpha)$ and if $cf \in \mathscr{R}(\alpha)$ for every constant $c$, and 
+$$
+\begin{aligned}
+\int_{a}^{b} (f_{1} + f_{2}) d \alpha &= \int_{a}^{b} f_{1}d \alpha + \int_{a}^{b} f_{2} d \alpha \\
+\int_{a}^{b} cf d\alpha &= c \int_{a}^{b} f d \alpha  \\
+\end{aligned}
+$$
+2. If $f_{1}(x) \leq f_{2}(x)$ on $[a,b]$ then 
+$$
+\int_{a}^{b}f_{1} d \alpha \leq \int_{a}^{b} f_{2} d \alpha
+$$
+3. If $f \in \mathscr{R}(\alpha)$ on $[a,b]$ and if $a < c < b$, then $f \in \mathscr{R}(\alpha)$ on $[a,c]$ and $[c, b]$, and 
+$$
+\int_{a}^{c} f d \alpha + \int_{b}^{c} f d \alpha = \int_{a}^{b} f d \alpha
+$$
+4. If $f \in \mathscr{R}(\alpha)$ on $[a,b]$ and if $f(x)$ is bounded by $M$, then 
+$$
+\left| \int_{a}^{b} f d \alpha \right| \leq M[\alpha(b) - \alpha(a)]
+$$
+5. If $f \in \mathscr{R}(\alpha_{1})$ and $f \in \mathscr{R}(\alpha_{2})$ then $f \in \mathscr{R}(\alpha_{1} + \alpha_{2})$ and 
+$$
+\int_{a}^{b}fd(\alpha_{1} + \alpha_{2}) = \int_{a}^{b} f d\alpha_{1} + \int_{a}^{b} f d \alpha_{2}
+$$
+then if $c$ is some positive constant and $f \in \mathscr{R}(\alpha)$ then $f \in \mathscr{c\alpha}$ and 
+$$
+\int_{a}^{b}f d(c \alpha) = c \int_{a}^{b} f d \alpha
+$$
+6. If $f,g \in \mathscr{R}(\alpha)$ on $[a,b]$ then 
+$$
+fg \in \mathscr{R}(\alpha) 
+\quad\quad\quad
+|f| \in \mathscr{R}(\alpha) 
+\quad\quad\quad 
+\left|\int_{a}^{b}f d\alpha\right| \leq \int_{a}^{b} |f| d\alpha
+$$
+> Proof is quite long so I will omit. However, this is just Rudin Theorem 6.12 and 6.13 copied verbatim.
 # Theorem (Lebesgue) 
 A bounded function $f : [a, b] \to \mathbb{R}$ is Riemann-Integrable iff the set 
 $$

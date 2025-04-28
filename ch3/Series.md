@@ -329,7 +329,7 @@ $$
 
 this useful for:
 
-## Theorem (Multiplicative Convergence)
+## Theorem (Alternating Series Test)
 Suppose
 1. the partial sums $A_{n}$ of $\sum a_{n}$ form a bounded sequence
 2. $b_{0}\geq b_{1} \geq b_{2}\geq  \cdots$
