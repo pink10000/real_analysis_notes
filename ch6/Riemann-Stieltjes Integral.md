@@ -245,12 +245,40 @@ fg \in \mathscr{R}(\alpha)
 \left|\int_{a}^{b}f d\alpha\right| \leq \int_{a}^{b} |f| d\alpha
 $$
 > Proof is quite long so I will omit. However, this is just Rudin Theorem 6.12 and 6.13 copied verbatim.
+
+# Definition (Step Function)
+The **unit step function** $I$ is defined by 
+$$
+I(x) = \begin{cases}
+0 & (x \leq 0) \\
+1 & (x > 0) \\
+\end{cases}
+$$
+# Theorem (Derivative Accumulator)
+Assume $\alpha$ increases [[Monotonic|monotonically]] and $\alpha' \in \mathscr{R}$ on $[a, b]$. Let $f$ be a bounded real function on $[a,b]$. Then $f \in \mathscr{R}(\alpha)$ if and only if $f\alpha' \in \mathscr{R}$. In that case
+$$
+\int_{a}^{b} f d \alpha = \int_{a}^{b} f(x) \alpha'(x) dx
+$$
+Proof:
+%% Let $\vepsi > 0$ be given and apply [[#Lemma (Riemann-Stieltjes Integrability)]] to $\alpha'$. Then there is a partition $P = \{x_{0}, \ldots, x_{n}\}$ of $[a,b]$ such that 
+$$
+U(P, \alpha') - L(P, \alpha') < \vepsi
+$$
+Then the [[Derivative#Theorem (Cauchy Mean Value Theorem)]] gives points $t_{i} \in [x_{i - 1}, x_{i}]$ such that
+$$
+\Delta \alpha_{i} - \alpha'(t_{i}) \Delta x_{i}
+$$ %%
+TODO
+
+
 # Theorem (Lebesgue) 
 A bounded function $f : [a, b] \to \mathbb{R}$ is Riemann-Integrable iff the set 
 $$
 E := \{ x \in [a,b] \mid f \text{ is not continuous on } x \}
 $$
 has Lebesgue measure $0$. 
+
+
 
 
 # Acknowledgement 
