@@ -41,7 +41,8 @@ $$
 \begin{aligned}
 \frac{g(b) - g(a)}{b - a} = g'(c) \quad\quad\quad c \in (a, b)
 \end{aligned}
-$$So, 
+$$
+So, 
 $$
 |\vvf(b) - \vvf(a)|^{2} = \left[ (\vvf(b) - \vvf(a)) \cdot \vvf'(c) \right]\cdot (b - a)
 $$
