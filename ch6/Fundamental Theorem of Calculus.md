@@ -38,7 +38,7 @@ $$
 and so the respective upper and lower integrals are equal.
 > If $\phi$ is strictly decreasing, then the bounds order needs to change. However, the theorem still holds. 
 
-# Theorem (Fundamental Theorem of Calculus)
+# Theorem (First Fundamental Theorem of Calculus)
 If $f : [a,b] \to \R$ is [[Riemann-Stieltjes Integral|Riemann Integrable]], define
 $$
 F(x) = \int_{a}^{x} f(t) \,dt 
@@ -80,3 +80,34 @@ $$
 \end{aligned}
 $$
 which converges to $0$ when $x \to x_{0}, t \to x_{0}$. 
+
+# Theorem (Second Fundamental Theorem of Calculus)
+If $f \in \mathscr{R}$ on $[a,b]$ and if there is a [[Derivative|differentiable]] function $F$ on $[a,b]$ such that $F' = f$, then 
+$$
+\int_{a}^{b} f(x) dx = F(b) - F(a)
+$$
+Proof:
+Let $\vepsi > 0$ be given. Choose a partition $P = \{x_{0}, \ldots, x_{n}\}$ of $[a,b]$ so that $U(P, f) - L(P, f) < \vepsi$. The [[Derivative#Theorem (Cauchy Mean Value Theorem)|MVT]] gives points $t_{i} \in [x_{i-1}, x_{i}]$ such that 
+$$
+F(x_{i}) - F(x_{i-1}) = f(t_{i}) \Delta x_{i}
+$$
+for $i = 1, \ldots, n$. Thus 
+$$
+\sum_{i=1}^{n} f(t_{i}) \Delta x_{i} = F(b) - F(a)
+$$
+It follows from Rudin Theorem 6.7 that 
+$$
+\left| F(b) - F(a)- \int_{a}^{b} f(x) dx \right| < \vepsi 
+$$
+Since this is true for every $\vepsi > 0$, we are done.
+> Need to fill in Theorem 6.7.
+
+# Theorem (Integration by Parts)
+Suppose $F,G$ are differentiable functions on $[a,b]$, $F' = f \in \mathscr{R}$, and $G' = g \in \sR$. Then 
+$$
+\int_{a}^{b} F(x) g(x) dx = F(b)G(b) - F(a)G(a) - \int_{a}^{b}f(x)G(x) dx
+$$
+Proof:
+Let $H(x):= F(x)G(x)$. By [[#Theorem (Second Fundamental Theorem of Calculus)]] to $H$ and its [[Derivative|derivative]], we note that $H' \in \sR$ by [[Riemann-Stieltjes Integral#Properties of the Integral]]. 
+> $H'(x) = F'(x)G(x) + F(x)G'(x) = fG + Fg$. 
+

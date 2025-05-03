@@ -147,6 +147,17 @@ $$
 $$
 
 So $\exists p, q \in X$ such that $f(p) = \sup f(X)$ and $f(q) = \inf f(X)$. Note that $\sup,\inf$ are in the closure by [[Induced Metric Space#Lemma (Bounded)]]. 
+
+# Theorem (Inverse Continuity)
+Suppose $f$ is an injective bijective continuous mapping of a [[Compact Sets|compact]] [[Metric Space|metric space]] $X$ onto a metric space $Y$. Then the inverse $f^{-1}$ defined on $Y$ by
+$$
+f^{-1}(f(x)) = x \quad\quad\quad (x \in X)
+$$
+is a *continuous* mapping of $Y$ onto $X$. 
+
+Proof:
+By [[Metric Space#Lemma (Open Complement Closed)]], it suffices to show $f(V)$ is an open set in $Y$ for every open set $V \subset X$. Let $V$ be such a set. Then the complement $V^{c}$ is closed, and thus compact by [[Compact Sets#Theorem (Closed in Compact is Compact)|theorem]]. Then $f(V^{c})$ is a compact subset of $Y$ by [[#Proposition (Continuity Retains Compactness)]] and is closed in $Y$. Since $f$ is bijective, $f(V) = (f(V^{c}))^{c}$ and so $f(V)$ is open.
+
 # Definition (Uniformly Continuous)
 Let $f : X \to Y$. We say $f$ is **Uniformly Continuous** if
 

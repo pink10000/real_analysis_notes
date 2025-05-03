@@ -3,77 +3,60 @@ tags:
   - 140B
   - ch5
 ---
-# Complex Functions
-In general, the definition of a [[Derivative]] holds for [[Complex Numbers|complex]] functions defined on $[a,b]$.
-- [[Derivative#Theorem (Differentiable is Continuous)]]
-- [[Derivative#Theorem (Derivative Rules)]]
-also hold (with the same proofs). For complex function $f$, the real $f_1$ and imaginary $f_{2}$ parts can be described as:
+# Definition (Vector-Valued Functions)
+The vector-valued $\vvf$ maps $[a,b] \to \R^{k}$. The same definition holds for $\vvf'(x)$ which is now
 $$
-f(t) = f_{1}(t) + if_{2}(t)
+\lim_{t \to x} \left| \frac{\vvf(t) - \vvf(x)}{t - x} - \vvf'(x) \right| = 0
 $$
-for $t \in [a, b]$ and as $f_{1}, f_{2}$ are real, 
+and $\vvf'$ is another function with values in $\R^{k}$. We have 
 $$
-f'(x) = f_{1}'(x) + if_{2}'(x)
-$$
-$f$ is differentiable at $x$ iff $f_{1}, f_{2}$ are both differentiable at $x$. 
-## (Weak) Mean Value Theorem Fails
-The [[Derivative#Theorem (Lagrange Mean Value Theorem)]] does not hold. For some real $x$, 
-$$
-f(x) = e^{ix} = \cos x + i \sin x 
-$$
-Then $f(2\pi) = f(0) = 1 - 1 = 0$, but $f'(x) = ie^{ix}$ and $|f'(x)| = 1$ for all real $x$. So, 
-$$
-1 = f'(x) = \frac{f(2\pi) - f(0)}{2\pi - 0} = 0
-$$
-which is a contradiction. 
-
-## L' Hopital's Rule Fails
-On the segment $(0, 1)$, let $f(x) = x$ and
-$$
-g(x) = x + x^{2}e^{i/x^{2}}
-$$
-Since $|e^{it}| = 1$ for all real $t$, we see that 
-$$
-\lim_{x \to 0} \frac{f(x)}{g(x)} = 1
-$$
-But then 
-$$
-g'(x) = 1 + \left(2x - \frac{2i}{x} \right)e^{i/x^{2}}
-$$
-for $x \in (0, 1)$ and that 
-$$
-|g'(x)| \geq \left| 2x - \frac{2i}{x} \right| - 1 \geq \frac{2}{x} - 1 = \frac{2 - x}{x}
-$$
-Hence 
-$$
-\left| \frac{f'(x)}{g'(x)} \right| = \frac{1}{|g'(x)|} \leq \frac{x}{2 - x}
-$$
-and so 
-$$
-\lim_{x \to 0} \frac{f'(x)}{g'(x)} = 0
-$$
-
-# Vector-Valued Functions
-The vector-valued $\textbf{f}$ maps $[a,b] \to \R^{k}$. The same definition holds for $\textbf{f}'(x)$ which is now
-$$
-\lim_{t \to x} \left| \frac{\textbf{f}(t) - \textbf{f}(x)}{t - x} - \textbf{f}'(x) \right| = 0
-$$
-and $\textbf{f}'$ is another function with values in $\R^{k}$. We have 
-$$
-\textbf{f} = (f_{1}, f_{2}, \cdots, f_{k})
+\vvf = (f_{1}, f_{2}, \cdots, f_{k})
 $$
 is differentiable at $x$ iff its components $f_{i}$ are differentiable. 
 
 ## Modified Vector MVT
-From [[Derivative#Theorem (Lagrange Mean Value Theorem)]] we have 
+Assume $\vvf: [a,b] \to \R^{k}$ is continuous and $\vvf'$ exists on $(a,b)$, then similar to [[Derivative#Theorem (Lagrange Mean Value Theorem)|Lagrange MVT]], we have 
 $$
-|f(b) - f(a)| \leq (b - a) \sup_{a < x < b}|f'(x)|
+\begin{aligned}
+|\vvf(b) - \vvf(a)| 
+&\leq (b - a) \cdot |\vvf'(c)| \\
+&\leq (b - a) \sup_{a < x < b}|\vvf'(c)|
+\end{aligned}
 $$
+Proof:
+Construct a function
+$$
+g : [a, b] \to \R^{k} \quad\quad g(x) = (\vvf(b) - \vvf(a)) \cdot \vvf(x)
+$$
+Then by taking the difference:
+$$
+\begin{aligned}
+g(b) - g(a) 
+&= (\vvf(b) - \vvf(a)) \cdot (\vvf(b) - \textbf{a}) \\ 
+&= |\vvf(b) - \vvf(a)|^{2}
+\end{aligned}
+$$
+And $g$ is [[Derivative|differentiable]] with $g' = (\vvf(b) - \vvf(a)) \cdot \vvf'(x)$. We apply [[Derivative#Theorem (Cauchy Mean Value Theorem)|MVT]], such that 
+$$
+\begin{aligned}
+\frac{g(b) - g(a)}{b - a} = g'(c) \quad\quad\quad c \in (a, b)
+\end{aligned}
+$$So, 
+$$
+|\vvf(b) - \vvf(a)|^{2} = \left[ (\vvf(b) - \vvf(a)) \cdot \vvf'(c) \right]\cdot (b - a)
+$$
+Then by cancelling, by [[Complex Numbers#Cauchy-Schwarz Inequality|Cauchy-Schwarz]] , we get 
+$$
+|\vvf(b) - \vvf(a)| \leq |\vvf'(c)| \cdot (b - a)
+$$
+## Counterexample:
+Consider 
+$$
+\vvf(t) = (-\sin t, \cos t)
+$$
+where we cannot expect 
+$$
+\frac{\vvf(b) - \vvf(a)}{b - a} = \vvf'(c)
+$$
+to be true all the time, since $|\vvf(t)| = 1$. The proof is similar to [[Complex Functions#Lagrange Mean Value Theorem Fails]].  
 
-# Theorem (Vector MVT)
-> This is a stronger form since it shows the existence of a point. 
-
-Suppose $\textbf{f}$ is a continuous mapping of $[a,b]$ into $\R^{k}$ and $\textbf{f}$ is differentiable in $(a, b)$. Then there exists $x \in (a, b)$ such that 
-$$
-|\vvf(b) - \vvf(a)| \leq (b - a) |\vvf'(x)|
-$$

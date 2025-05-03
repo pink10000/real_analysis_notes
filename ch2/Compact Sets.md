@@ -242,10 +242,10 @@ $$
 
 Note $\R \subset \bigcup_{n\in \Z} I_{n}$ but no finite sub cover exists. This is by consequence of [[Archimedean Property]]. 
 
-# Theorem 2.34
+# Theorem (Compact is Closed)
 Compact subsets of [[Metric Space|metric spaces]] are [[Metric Space#Open & Closed|closed]]. 
 
 Let $K$ be a compact subset of metric space $X$. Proof follows from showing that $K^{c}$ is open relative to $X$.   
 
-# Theorem 2.35
+# Theorem (Closed in Compact is Compact)
 Closed subsets of compact sets are compact. 

@@ -86,7 +86,8 @@ const config: QuartzConfig = {
           "\\Q": "\\mathbb{Q}",
           "\\RQ": "\\R\\backslash\\Q", // Note: Assumes \R is defined above or standard
           "\\cA": "\\mathcal{A}",
-        
+	  "\\sR": "\\mathscr{R}",
+
           // // Statistics
           "\\var": "\\text{Var}",
           "\\Binom": "\\text{Binom}",
