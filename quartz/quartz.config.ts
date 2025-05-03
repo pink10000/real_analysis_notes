@@ -86,7 +86,7 @@ const config: QuartzConfig = {
           "\\Q": "\\mathbb{Q}",
           "\\RQ": "\\R\\backslash\\Q", // Note: Assumes \R is defined above or standard
           "\\cA": "\\mathcal{A}",
-	  "\\sR": "\\mathscr{R}",
+	        "\\sR": "\\mathscr{R}",
 
           // // Statistics
           "\\var": "\\text{Var}",
@@ -120,6 +120,7 @@ const config: QuartzConfig = {
         
           // Misc
           "\\notexists": "\\nexists",
+          "\\vvf": "\\textbf{f}"
         },
       
       }),
