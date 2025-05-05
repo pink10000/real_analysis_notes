@@ -120,7 +120,8 @@ const config: QuartzConfig = {
         
           // Misc
           "\\notexists": "\\nexists",
-          "\\vvf": "\\textbf{f}"
+          "\\vvf": "\\textbf{f}",
+          "\\rrarrow": "\\rightrightarrows"
         },
       
       }),
