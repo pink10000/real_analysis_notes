@@ -38,7 +38,7 @@ f(x) = \begin{cases}
 $$
 giving us a point of [[Continuity#Definition (Discontinuity)|simple discontinuity]]. So, if $f_{n} \to f$, and $f_{n}$ is [[Continuity|continuous]], then $f$ is *not necessarily* continuous. 
 
-# Definition (Uniform Converge)
+# Definition (Uniform Convergence)
 Let $f_{n} : E \to \C$ and $f : E \to \C$ for $n \geq 1$. We say that $\{f_{n}\}_{n \geq 1}$ **uniformly converges to $f$** if for any $\vepsi > 0$, there exists $N > 0$, such that for any $n > N$, for any $x \in E$, $|f_{n}(x) - f(x)| < \vepsi$. This denoted by 
 $$
 f_{n} \rightrightarrows f 
@@ -77,3 +77,105 @@ $$
 f_{n} \rrarrow f \iff \lim_{n \to \infty} M_{n} = 0
 $$
 This is just the definition, so the proof can be omitted.
+
+## Criterion 2 (Cauchy Criterion)
+The sequence of functions $\{f_{n}\}$ defined on $E$, **converges uniformly on $E$** if and only if for every $\vepsi > 0$ there exists an integer $N$ such that $m \geq N, n \geq N, x \in E$ implies 
+$$
+|f_{n}(x) - f_{m}(x)| \leq \vepsi 
+$$
+Proof: 
+Suppose $\{f_{n}\}$ converges uniformly on $E$, and let $f$ be the limit function. Then there is an integer $N$ such that $n \geq N, x \in E$ and 
+$$
+|f_{n}(x) - f(x)| \leq \vepsi/2
+$$
+so that 
+$$
+|f_{n}(x) - f_{m}(x) \leq |f_{n}(x) - f(x)| + |f(x) - f_{m}(x)| \leq \vepsi 
+$$
+and the forward direction is done. 
+
+Conversely, if the Cauchy condition holds, then by [[Cauchy Sequences#Theorem (Compact in Complete)|theorem]] and that $E \subset \R^{1}, \{f_{n}(x)\}$ converges for every $x$. Let the limit be $f(x)$. Let $\vepsi > 0$ be given, and choose $N$ such that  
+$$
+|f_{n}(x) - f_{m}(x)| \leq \vepsi
+$$
+holds. We fix some $n$, and let $m \to \infty$. Then as $f_{m}(x) \to f(x)$, 
+$$
+|f_{n}(x) - f(x)| \leq \vepsi
+$$
+for every $n \geq N$ and every $x \in E$. 
+
+## Criterion 3 (Comparison Test)
+Suppose $\{f_{n}\}$ is a sequence of functions defined on $E$, and suppose 
+$$
+|f_{n}(x)| \leq M_{n}
+\quad\quad\quad
+x \in E, n = 1, 2, 3, \ldots
+$$
+Then $\sum f_{n}$ converges uniformly on $E$ if $\sum M_{n}$ converges. 
+> The converse is not necessarily true. 
+
+Proof: 
+If $\sum M_{n}$ converges, then for arbitrary $\vepsi > 0$, 
+$$
+\left| \sum_{i=n}^{m} f_{i}(x) \right|
+\leq
+\sum_{i=n}^{m} M_{i}\leq \vepsi 
+\quad\quad\quad
+(x \in E)
+$$
+provided $m,n$ are large enough. Then uniformly convergence is satisfied from [[#Criterion 2 (Cauchy Criterion)]]. 
+
+# Uniform Convergence and Continuity
+Suppose $f_{n}\to f$ uniformly on a set $E$ is a [[Metric Space|metric space]]. Let $x$ be a limit point of $E$, and suppose that 
+$$
+\lim_{t \to x} f_{n}(t) = A_{n} 
+\quad\quad\quad
+(n = 1, 2, 3, \ldots)
+$$
+Then $\{A_{n}\}$ converges, and 
+$$
+\lim_{t \to x} f(t) = \lim_{n \to \infty} A_{n}
+$$
+In other words, 
+$$
+\lim_{t \to x} \lim_{n \to \infty} f_{n}(t) = \lim_{n \to \infty} \lim_{t \to x} f_{n}(t)
+$$
+Proof:
+Let $\vepsi > 0$ be given. By uniform convergence of $\{f_{n}\}$, $\exists N$ such that $n,m \geq N, t \in E$ imply 
+$$
+|f_{n}(t) - f_{m}(t)| \leq \vepsi
+$$
+Letting $t \to x$, we obtain 
+$$
+|A_{n} - A_{m}| \leq \vepsi
+$$
+for $n, m \geq N$ so that $\{A_{n}\}$ is a [[Cauchy Sequences|Cauchy Sequence]] and therefore converges. Let $A$ denote the convergence point. Then, 
+$$
+|f(t) - A| \leq |f(t) - f_{n}(t)| + |f_{n}(t) - A_{n}| + |A_{n} - A|
+$$
+If we pick $n$ such that 
+$$
+|f(t) - f_{n}(t)| \leq \vepsi/3
+$$
+for all $t \in E$ (possible by uniform convergence), and such that 
+$$
+|A_{n} - A| \leq \vepsi/3
+$$
+Then for this $n$, we choose neighborhood $N_{r}(x)$ of $x$ such that
+$$
+|f_{n}(t) - A_{n}| \leq \vepsi/3
+$$
+if $t \in V \cap E, t \neq x$. By substitution, 
+$$
+\begin{aligned}
+|f(t) - A| 
+&\leq |f(t) - f_{n}(t)| + |f_{n}(t) - A_{n}| + |A_{n} - A| \\
+&\leq \vepsi/3 + \vepsi/3 + \vepsi/3 \\
+&= \vepsi
+\end{aligned}
+$$
+and we are done. 
+
+## Corollary (Uniform Converges Retains Continuity)
+If $\{f_{n}\}$ is a [[Sequences|sequence]] of [[Continuity|continuous]] functions on $E$, and if $f_{n}\to f$ uniformly on $E$, then $f$ is continuous on $E$. 
+

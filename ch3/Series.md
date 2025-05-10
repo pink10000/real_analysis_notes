@@ -327,7 +327,7 @@ $$
 
 $$
 
-this useful for:
+this is useful for the following theorem:
 
 ## Theorem (Alternating Series Test)
 Suppose

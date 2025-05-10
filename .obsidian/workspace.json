@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "aef56bc455b1fd8c",
+        "id": "82788a300ca99129",
         "type": "tabs",
         "children": [
           {
-            "id": "50dd789fed7270dc",
+            "id": "4bf8b9d9e256bf76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "140B_lectures/Lecture B13.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lecture B13"
+            }
+          },
+          {
+            "id": "a0aeb2b6cfbc6a1a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "ch7/Sequence & Series of Functions.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Sequence & Series of Functions"
             }
+          },
+          {
+            "id": "1090a5062f8c7eee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ch3/Cauchy Sequences.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cauchy Sequences"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -40,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sch",
+                "query": "euler",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -278,36 +307,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "50dd789fed7270dc",
+  "active": "a0aeb2b6cfbc6a1a",
   "lastOpenFiles": [
+    "140B_lectures/Lecture B13.md",
     "ch7/Sequence & Series of Functions.md",
+    "ch3/Cauchy Sequences.md",
+    "ch3/Sequences.md",
+    "ch2/Heine-Borel Theorem.md",
+    "ch6/Measure.md",
+    "ch3/Series.md",
+    "ch6/Fundamental Theorem of Calculus.md",
+    "ch3/Power Series.md",
+    "ch6/Riemann-Stieltjes Integral.md",
+    "ch1/Complex Numbers.md",
+    "ch6/Integration of Complex Functions.md",
     "140B_lectures/Lecture B12.md",
     "140B_lectures/Lecture B11.md",
     "140B_lectures/Untitled 1.md",
     "ch7",
     "ch6/Integration of Vector Functions.md",
-    "ch6/Integration of Complex Functions.md",
-    "ch6/Riemann-Stieltjes Integral.md",
-    "ch3/Series.md",
-    "ch3/Power Series.md",
     "ch4/Continuity.md",
     "ch2/Compact Sets.md",
     "140B_lectures/Lecture B10.md",
     "ch5/Vector-Valued Derivatives.md",
     "ch5/Complex Functions.md",
     "ch5/Derivative.md",
-    "ch6/Fundamental Theorem of Calculus.md",
     "140B_lectures/Lecture B9.md",
     "140B_lectures/Lecture B8.md",
     "140B_lectures/Lecture B7.md",
     "ch6/Differentiation on Vector Functions.md",
-    "ch5/Taylor's Theorem.md",
-    "ch5/L'Hopital's Rule.md",
-    "ch3/Sequences.md",
     "Pasted image 20250421125627.png",
-    "ch6/Measure.md",
-    "ch4/Limits at Infinity.md",
-    "140B_lectures/Lecture B2.md",
     "ch6",
     "quartz/public/index-og-image.webp",
     "quartz/public/postscript.js",
