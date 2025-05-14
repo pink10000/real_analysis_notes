@@ -179,3 +179,56 @@ and we are done.
 ## Corollary (Uniform Converges Retains Continuity)
 If $\{f_{n}\}$ is a [[Sequences|sequence]] of [[Continuity|continuous]] functions on $E$, and if $f_{n}\to f$ uniformly on $E$, then $f$ is continuous on $E$. 
 
+Proof:
+$\forall p \in E$, WTS that $\lim_{x \to p} f(x) = f(p)$ or that 
+$$
+\forall \vepsi > 0, \exists \delta > 0, |x - p|< \delta \implies |f(x) - f(p)| < \vepsi 
+$$
+so we have that 
+$$
+|f(x) - f(p)| \leq |f(x) - f_{n}(x)| + |f_{n}(x) - f_{n}(p)| + |f_{n}(p) - f(p)|
+$$
+pick $N$ large enough so that 
+$$
+\begin{aligned}
+|f(x) - f_{N}(x)| &< \vepsi/3 \\ 
+|f(p) - f_{N}(p)| &< \vepsi /3
+\end{aligned}
+$$
+since $f_{n}$ is continuous, then 
+$$
+\exists \delta > 0, |x - p| < \delta \implies |f_{n}(x) - f_{n}(p)| < \vepsi/3
+$$
+and summing up all portions, we have that 
+$$
+|f(x) - f(p)| \leq \vepsi
+$$
+# Definition (Complex Continuous Bounded Functions)
+If $X$ is a [[Metric Space]] then let $\mathscr{C}(X)$ denote the set of all [[Complex Numbers|complex-valued]] [[Continuity|continuous]] bounded functions with domain $X$.  
+- Boundedness is redundant if $X$ is compact, by [[Heine-Borel Theorem]]
+
+We associate with $f \in \mathscr{C}(X)$ with a **[[Supremum]] norm**: 
+$$
+||f|| = \sup_{x \in X}|f(x)|
+$$
+- $f$ is bounded, so any norm is finite. It is obvious that $||f|| = 0$ only if $\forall x \in X, f(x) = 0$. 
+- $h(x) = f(x) + g(x) \implies |h(x)| \leq |f(x)| + |g(x)| + ||f|| + ||g||$ for all $x \in X$ such that 
+- $||f + g|| \leq ||f|| + ||g||$ 
+- By defining $d(f, g) = ||f - g||$ , then we have that by [[Metric Space#Definition]], $\mathscr{C}(X)$ is a [[Metric Space]]. 
+
+## Theorem (Complete)
+$\mathscr{C}(X)$ is also a [[Cauchy Sequences#Definition (Completeness)|complete]] metric space. 
+
+Proof:
+If $\{f_{n}\} \subset \mathscr{C(X)}$ is a [[Cauchy Sequences|Cauchy Sequence]], then $\exists f \in \mathscr{C}(X)$ such that 
+$$
+\begin{aligned}
+\sup_{n,m \geq N} |f_{n}(x) - f_{m}(x)| 
+&\iff \lim_{n \to \infty} f_{n} = f \\
+&\iff \lim_{n \to \infty} d(f_{n}, f) = 0 \\
+&\iff \lim_{n \to \infty} \sup_{x \in X} d(f_{n}(x) - f(x)) = 0 \\
+&\iff f_{n} \rrarrow f 
+\end{aligned}
+$$
+by [[#Criterion 2 (Cauchy Criterion)]] and [[#Definition (Uniform Convergence)]]. Then by [[#Corollary (Uniform Converges Retains Continuity)]], $f$ is continuous and since $f_{n}$ is bounded, $f$ is bounded. Thus $f \in \mathscr{C}(X)$.
+
