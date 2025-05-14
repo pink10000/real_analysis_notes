@@ -78,7 +78,6 @@ $\exists N$ such that if $n > N$/ then $|a_n - A| < \vepsi$. Then $\{a_n\}$ is b
 > \max{ |a_1|, |a_2|, \ldots, |a_n|, |A| + \vepsi }
 > $$
 
-# Theorem (Arzecla - Angoli Theorem)
-Let $f_n $ be a sequence of continuous functions on compact set $K$. Then if the $\{f_n\}$ is boudned and equicontinuous, then 
-$\exists$ a uniformly convergent subsequence.
+# Theorem (Arzela - Ascoli Theorem)
+Let $f_n $ be a sequence of continuous functions on compact set $K$. Then if the $\{f_n\}$ is bounded and equicontinuous, then $\exists$ a uniformly convergent subsequence.
 
