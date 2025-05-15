@@ -72,12 +72,7 @@ $$
 $$
 and we are done. 
 
-> For this proposition, the motivation comes from how we proved that converging sequences are bounded. So, if $a_n \to A$, then 
-$\exists N$ such that if $n > N$/ then $|a_n - A| < \vepsi$. Then $\{a_n\}$ is bounded by 
->$$
-> \max{ |a_1|, |a_2|, \ldots, |a_n|, |A| + \vepsi }
-> $$
-
+> For this proposition, the motivation comes from how we proved that converging sequences are bounded. So, if $a_n \to A$, then $\exists N$ such that if $n > N$/ then $|a_n - A| < \vepsi$. Then $\{a_n\}$ is bounded by $\max{ |a_1|, |a_2|, \ldots, |a_n|, |A| + \vepsi }$.
 # Theorem (Arzela - Ascoli Theorem)
-Let $f_n $ be a sequence of continuous functions on compact set $K$. Then if the $\{f_n\}$ is bounded and equicontinuous, then $\exists$ a uniformly convergent subsequence.
+Let $f_n $ be a sequence of continuous functions on compact set $K$. Then if the $\{f_n\}$ is bounded/ and equicontinuous, then $\exists$ a uniformly convergent subsequence.
 
