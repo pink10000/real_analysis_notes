@@ -48,9 +48,10 @@ which also converges. By repeating this theorem $n$ times, we have a convergent 
 > I am not sure why we need Cantor's Diagonal Argument here. 
 
 # Definition (Equicontinuous)
-Let $\mathscr{F}$ be a collection of functions on $E \to \C$. This collection is **equicontinuous** if for any $\vepsi > 0, \exists \delta > 0$ such that if 
-$|x - y| < \delta$, then $|f(x) - f(y)| < \vepsi$ for all $x, y \in E$ and $f \in \mathscr{f}$. 
-
+Let $\mathscr{F}$ be a collection of functions on $E \to \C$. This collection is **equicontinuous** if for any $\vepsi > 0, \exists \delta > 0$ such that if $|x - y| < \delta$, then $|f(x) - f(y)| < \vepsi$ for all $x, y \in E$ and $f \in \mathscr{F}$. 
+$$
+(\forall \vepsi > 0)(\exists \delta > 0)(\forall x,y \in E)(|x - y| < \delta \implies |f(x) - f(y)| < \vepsi)
+$$
 > Intuitively, for any inputs that are "close" to one another, the outputs are also "close" to one another.
 
 In particular, this guarantees that any $f \in \mathscr{F}$ is uniformly continuous. 

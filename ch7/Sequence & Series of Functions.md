@@ -231,4 +231,3 @@ $$
 \end{aligned}
 $$
 by [[#Criterion 2 (Cauchy Criterion)]] and [[#Definition (Uniform Convergence)]]. Then by [[#Corollary (Uniform Converges Retains Continuity)]], $f$ is continuous and since $f_{n}$ is bounded, $f$ is bounded. Thus $f \in \mathscr{C}(X)$.
-
