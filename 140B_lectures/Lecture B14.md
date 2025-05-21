@@ -4,5 +4,5 @@ tags:
   - 140B
   - Lecture
 ---
-[[Sequence & Series of Functions]]
+[[Pointwise and Uniform Convergence]]
 [[Uniform Convergence and Integration]]

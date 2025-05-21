@@ -19,7 +19,7 @@ We first start by defining an $\vepsi-$web or $\vepsi-$net.
 Let $f_n \in \mathscr{C}(K, \C)$ with $K$ compact. If $f_n \rrarrow f$, then $\{ f_n \}$ is equicontinuous. 
 
 Proof:
-By [[Sequence & Series of Functions#Uniform Convergence and Continuity|theorem]], $f$ is continuous. For $\vepsi > 0, \exists N$ such that $|f_{n}(x) - f(x)| < \vepsi/3$ for any $n > N, \forall x \in K$. Now, since $f_1, f_2, \ldots, f_N, f$ are uniformly continuous, then we need to find some $\delta$ that satisfies all of the functions. So we can examine a few functions. 
+By [[Pointwise and Uniform Convergence#Uniform Convergence and Continuity|theorem]], $f$ is continuous. For $\vepsi > 0, \exists N$ such that $|f_{n}(x) - f(x)| < \vepsi/3$ for any $n > N, \forall x \in K$. Now, since $f_1, f_2, \ldots, f_N, f$ are uniformly continuous, then we need to find some $\delta$ that satisfies all of the functions. So we can examine a few functions. 
 
 We know the functions are all uniformly continuous, because they are all continuous functions on a compact metric space. Boundedness is a consequence of [[Heine-Borel Theorem]].
 
@@ -98,7 +98,7 @@ $$\begin{aligned}
 &\leq \vepsi/3 + \vepsi/3 + \vepsi \\
 &= \vepsi
 \end{aligned}$$
-And so by the [[Sequence & Series of Functions#Criterion 2 (Cauchy Criterion)|Cauchy Criterion]], $g_{n}$ uniformly converges. 
+And so by the [[Pointwise and Uniform Convergence#Criterion 2 (Cauchy Criterion)|Cauchy Criterion]], $g_{n}$ uniformly converges. 
 
 # Theorem (Polynomial Uniform Convergence)
 Let $f: [a,b] \to \C$ be [[Continuity|continuous]]. Then $\exists$ polynomials $\{p_{n}\}$ such that $\{p_{n}\} \rrarrow f$ on $[a,b]$. Furthermore, if $f$ is real-valued, then each $p_{n}$ has real-valued coefficients.  

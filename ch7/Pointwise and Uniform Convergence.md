@@ -3,7 +3,7 @@ tags:
   - 140B
   - ch7
 ---
-# Definition (Pointwise Convergences)
+# Definition (Pointwise Convergence)
 Let $E$ be a set (most of the time, a [[Metric Space]]). Consider 
 $$
 f_{n} : E \to \C  \quad\quad\quad n \geq 1
@@ -125,7 +125,7 @@ $$
 $$
 provided $m,n$ are large enough. Then uniformly convergence is satisfied from [[#Criterion 2 (Cauchy Criterion)]]. 
 
-# Uniform Convergence and Continuity
+# Theorem (Uniform Convergence and Continuity)
 Suppose $f_{n}\to f$ uniformly on a set $E$ is a [[Metric Space|metric space]]. Let $x$ be a limit point of $E$, and suppose that 
 $$
 \lim_{t \to x} f_{n}(t) = A_{n} 

@@ -4,6 +4,6 @@ tags:
   - 140B
   - ch7
 ---
-[[Sequence & Series of Functions]]
+[[Pointwise and Uniform Convergence]]
 [[Uniform Convergence and Integration]]
 [[Bounded Sequences of Functions]]
