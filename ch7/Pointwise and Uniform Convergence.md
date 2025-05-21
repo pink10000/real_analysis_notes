@@ -242,11 +242,14 @@ K = \{ x_1, x_2, x_3, \ldots  \}
 $$
 For $x_1$, since $\{ f_{n}(x_1) \}$ is bounded by [[Sequences#Lemma (Bolzano-Weierstrass Theorem)|Bolzano-Weierstrass]], then we have the subsequence
 $$
-f_{1, 1}, f_{1,2}, f_{1, 3}, \cdots
+S_{1} := f_{1, 1}, f_{1,2}, f_{1, 3}, \cdots
 $$
-converges. Using Bolzano-Weierstrass again, we have the following subsequence
+converges. Now we evaluate on $x_{2}$. Using Bolzano-Weierstrass again, , we have the following subsequence 
 $$
-f_{2, 1}, f_{2, 2}, f_{2,3}, \cdots
+S_{2} := f_{2, 1}, f_{2, 2}, f_{2,3}, \cdots
 $$
-which also converges. By repeating this theorem $n$ times, we have a convergent subsequence by Cantor's Diagonal Argument.
-> I am not sure why we need Cantor's Diagonal Argument here. 
+which also converges for both $x_{1}, x_{2}$. By repeating this theorem for every element in $K$ (which we can do, since it is countable), then by Cantor's Diagonal Argument, we have a pointwise convergent subsequence $S_{\infty} := f_{k,k}$ for every point in $K$. 
+
+> I believe we need diagonalization for a couple reasons. 
+> 1. Since for each time we use Bolzano-Weierstrass, there is a chance we may remove some elements that ensure a previous point (if we were at the $n$th step, but we accidentally made it no longer pointwise convergent on $n/2$th step) is still point wise convergent. 
+> 2. It ensures that this subsequence is convergent for all $x_{i} \in K$.  Indeed, since $S_{1}$ ensures $f_{k,k}(x_{1})$ is convergent, $S_2$ ensures $f_{k,k}(x_{2})$ is convergent, and so on. 
