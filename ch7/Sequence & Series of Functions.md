@@ -4,7 +4,7 @@ tags:
   - ch7
 ---
 # Definition (Pointwise Convergences)
-Let $E$ be a a set (most of the time, a [[Metric Space]]). Consider 
+Let $E$ be a set (most of the time, a [[Metric Space]]). Consider 
 $$
 f_{n} : E \to \C  \quad\quad\quad n \geq 1
 $$
