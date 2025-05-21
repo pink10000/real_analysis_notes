@@ -231,3 +231,22 @@ $$
 \end{aligned}
 $$
 by [[#Criterion 2 (Cauchy Criterion)]] and [[#Definition (Uniform Convergence)]]. Then by [[#Corollary (Uniform Converges Retains Continuity)]], $f$ is continuous and since $f_{n}$ is bounded, $f$ is bounded. Thus $f \in \mathscr{C}(X)$.
+
+# Theorem (Countable is Pointwise Convergence)
+We are guaranteed to have pointwise convergence on a subsequence if the domain $K$ is [[Cardinality#Lemma (Countability)|countable]]. 
+
+Proof:
+WLOG, let us assume that all the functions in the sequence are distinct. Since $K$ is countable, we can write 
+$$
+K = \{ x_1, x_2, x_3, \ldots  \}
+$$
+For $x_1$, since $\{ f_{n}(x_1) \}$ is bounded by [[Sequences#Lemma (Bolzano-Weierstrass Theorem)|Bolzano-Weierstrass]], then we have the subsequence
+$$
+f_{1, 1}, f_{1,2}, f_{1, 3}, \cdots
+$$
+converges. Using Bolzano-Weierstrass again, we have the following subsequence
+$$
+f_{2, 1}, f_{2, 2}, f_{2,3}, \cdots
+$$
+which also converges. By repeating this theorem $n$ times, we have a convergent subsequence by Cantor's Diagonal Argument.
+> I am not sure why we need Cantor's Diagonal Argument here. 
