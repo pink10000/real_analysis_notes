@@ -27,7 +27,7 @@ c_{m} = \frac{1}{2\pi} \int_{-\pi}^{\pi} f \cdot e^{-imx} dx
 $$
 Let
 $$
-S_{N} := \frac{1}{f(x)} \sum_{k=-N}^{N} c_{k} e^{ikx}
+S_{N} f(x) := \sum_{k=-N}^{N} c_{k} e^{ikx}
 $$
 This is the **Fourier Partial Sum**. We say that 
 $$
@@ -42,7 +42,7 @@ $$
 $$
 exists. 
 
-# Theorem (Fourier Partial Sums Approximate)
+# Theorem (Fourier Partial Sums are best Approximate)
 These sums are *best* approximations. Let $N \geq 0, f : [-\pi, \pi] \to \C$ be [[Riemann-Stieltjes Integral|integrable]] and let 
 $$
 S_{n} \cdot f(x) = \sum_{k=-N}^{N }c_{k}e^{ikx} 
@@ -87,4 +87,42 @@ $$
 \int_{-\pi}^{\pi} |f - S_{N}|^{2} = \int_{-\pi}^{\pi} |f|^{2} - \int_{-\pi}^{\pi} |S_{N} f|^{2} \leq  \int_{-\pi}^{\pi} |f - t_{N}|^{2}dx
 $$
 and thus the proof is done. 
+
+# Riemann-Lesbeque Lemma
+Let $f : [-\pi, \pi] \to \C$ be [[Riemann-Stieltjes Integral|integrable]] with its associated Fourier Series:
+$$
+\sum_{n \in \Z} c_{n} e^{inx} 
+\quad\quad\quad
+c_{k} = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-ikx} dx 
+$$
+Recall from the previous theorem that 
+$$
+\begin{aligned}
+0 \leq \int_{-\pi}^{\pi} |f|^{2} dx 
+&= \int_{-\pi}^{\pi} |S_{N} f|^{2} + \int_{-\pi}^{\pi} |f - S_{N}f|^{2} \\
+\end{aligned}
+$$
+this implies that 
+$$
+0 \leq 2\pi \sum_{k=-N}^{N} c_{k}\ovl{c_{k}} \leq \int_{-\pi}^{\pi} |f|^{2} dx
+$$
+by expanding $|S_{N}f|$ and showing that it is bounded above. By the [[Series#Lemma (Convergence, Boundness)]] we get that RHS converges, such that 
+$$
+\sum_{k=-\infty}^{\infty} |c_{k}|^{2}
+$$
+converges, such that $\lim_{k \to \infty} |c_{k}| = 0$. 
+
+
+$$
+\lim_{k \to \infty} \left| \int_{-\pi}^{\pi} f(x) e^{-ikx} \right| = 0
+$$
+## Corollary
+This culminates to 
+$$
+\begin{aligned}
+\lim_{N \to \infty} \left| \int_{-\pi}^{\pi} f(x) \cos(Nx) \right| &= 0 \\
+\lim_{N \to \infty} \left| \int_{-\pi}^{\pi} f(x) \sin(Nx) \right| &= 0
+\end{aligned}
+$$
+Intuitively, the higher the frequency, the oscillations increase rapidly, the positive and negative areas get smaller, until they approach $0$. 
 
