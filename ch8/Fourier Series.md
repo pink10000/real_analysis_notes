@@ -72,7 +72,8 @@ $$
 \end{aligned}
 $$
 such that 
-$$\begin{aligned}
+$$
+\begin{aligned}
 \int_{-\pi}^{\pi} |f - t_{N}|^{2} dx  
 &= \int_{-\pi}^{\pi} f\ovl{f} dx + \int_{-\pi}^{\pi} t_{N}\ovl{f} dx + \int_{-\pi}^{\pi} f\ovl{t_{N}} dx +\int_{-\pi}^{\pi} t_{N}\ovl{t_{N}} dx \\ 
 &= \int_{-\pi}^{\pi} |f^{2}|dx +
@@ -81,7 +82,8 @@ $$\begin{aligned}
  \left[ \sum (c_{k} - d_{k})\ovl{(c_{k} - d_{k})} \right] - 2\pi \sum c_{k}\ovl{c_{k}} \\ 
 &= \int_{-\pi}^{\pi} |f|^{2} + \int_{-\pi}^{\pi} |S_{N}f - t_{N}|^{2} - \int_{-\pi}^{\pi} |S_{N} f|^{2}dx  \\ 
 &\geq \int_{-\pi}^{\pi} |f^{2}| dx - \int_{-\pi}^{\pi} |S_{N} f|^{2}dx 
-\end{aligned}$$
+\end{aligned}
+$$
 Let $t_{N} = S_{N} f$. Then we have that 
 $$
 \int_{-\pi}^{\pi} |f - S_{N}|^{2} = \int_{-\pi}^{\pi} |f|^{2} - \int_{-\pi}^{\pi} |S_{N} f|^{2} \leq  \int_{-\pi}^{\pi} |f - t_{N}|^{2}dx
