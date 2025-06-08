@@ -54,7 +54,7 @@ Proof:
 For $\vepsi = 1, 1/2, 1/3, \ldots$, pick $\vepsi-$web and union them all together. Since we iterate over $\N$ for $\vepsi$, it is countable. By definition of an $\vepsi-$web, it is dense. 
 
 ---
-Let $f_n$ be a sequence of continuous functions on compact set $K$. Then if $\{f_n\}$ is pointwise bounded and equicontinuous, then
+Let $f_n$ be a sequence of continuous functions on compact set $K$. Then if $\{f_n\}$ is *pointwise bounded* and *equicontinuous*, then
 - $\{f_{n}\}$ is uniformly bounded on $K$
 - $\exists$ a uniformly convergent subsequence
 
@@ -99,6 +99,7 @@ $$\begin{aligned}
 &= \vepsi
 \end{aligned}$$
 And so by the [[Pointwise and Uniform Convergence#Criterion 2 (Cauchy Criterion)|Cauchy Criterion]], $g_{n}$ uniformly converges. 
-
+> Uniform boundedness + equicontinuous = uniformly convergent subsequence
+> This is like a compactness condition. This theorem is similar to [[Continuity#Theorem (Continuity + Compact = Uniform Continuity)]]. 
 # Theorem (Polynomial Uniform Convergence)
 Let $f: [a,b] \to \C$ be [[Continuity|continuous]]. Then $\exists$ polynomials $\{p_{n}\}$ such that $\{p_{n}\} \rrarrow f$ on $[a,b]$. Furthermore, if $f$ is real-valued, then each $p_{n}$ has real-valued coefficients.  
