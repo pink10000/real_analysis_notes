@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "140B_lectures/Lecture B17.md",
+                "file": "ch8/Trigonometric Functions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture B17"
+              "title": "Trigonometric Functions"
             }
           },
           {
@@ -41,15 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch3/Series.md",
-                "mode": "preview",
+                "file": "140B_lectures/Lecture B18.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Series"
+              "title": "Lecture B18"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,8 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e91d530ce0622ef6",
@@ -306,12 +306,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ecf0ba6050d60308",
+  "active": "0ded8977f171ec49",
   "lastOpenFiles": [
+    "ch8/Trigonometric Functions.md",
+    "ch8/Hilbert Space.md",
+    "140B_lectures/Lecture B18.md",
     "ch8/Power Series Revisited.md",
-    "ch7/Uniform Convergence and Differentiation.md",
     "ch3/Series.md",
+    "ch8/Abel's Summations Theorem.md",
     "140B_lectures/Lecture B17.md",
+    "ch7/Uniform Convergence and Differentiation.md",
     "ch7/Equicontinuity.md",
     "ch7/Bounded Sequences of Functions.md",
     "ch3/Power Series.md",
@@ -331,10 +335,6 @@
     "140B_lectures/Lecture B13.md",
     "ch2/Heine-Borel Theorem.md",
     "ch3/Rearrangements.md",
-    "ch6/Measure.md",
-    "ch1/Complex Numbers.md",
-    "ch6/Integration of Complex Functions.md",
-    "140B_lectures/Lecture B12.md",
     "ch7",
     "Pasted image 20250421125627.png",
     "ch6",
