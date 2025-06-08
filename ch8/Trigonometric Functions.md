@@ -57,7 +57,8 @@ a_{k} = c_{k} + c_{-k}
 \quad\quad\quad 
 b_{k} = c_{k} - c_{-k}
 $$
-then $$
+then 
+$$
 \begin{aligned}
 c_{k} e^{ikx} + c_{-k}e^{-ikx} 
 &= c_{k}( \cos(kx) + i \sin(kx) ) + c_{-k} (\cos(-kx) + i \sin(-kx)) \\
@@ -65,6 +66,7 @@ c_{k} e^{ikx} + c_{-k}e^{-ikx}
 \end{aligned}
 $$
 and the proof is equivalent. 
+
 # Definition (Inner Product) 
 In the space of [[Riemann-Stieltjes Integral|integrable functions]] over $[-\pi, \pi]$ with **inner product** given by 
 $$\langle f,g \rangle = \int_{-\pi}^{\pi} f \cdot \ovl{g} dx$$
