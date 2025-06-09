@@ -42,7 +42,7 @@ $$
 $$
 exists. 
 
-# Theorem (Fourier Partial Sums are best Approximate)
+# Theorem (Fourier Partial Sums are Best Approximate)
 These sums are *best* approximations. Let $N \geq 0, f : [-\pi, \pi] \to \C$ be [[Riemann-Stieltjes Integral|integrable]] and let 
 $$
 S_{n} \cdot f(x) = \sum_{k=-N}^{N }c_{k}e^{ikx} 
@@ -128,3 +128,20 @@ $$
 $$
 Intuitively, the higher the frequency, the oscillations increase rapidly, the positive and negative areas get smaller, until they approach $0$. 
 
+# Lemma (Pointwise Convergence of the Fourier Sum)
+Let $x_{0} \in [-\pi, \pi]$. Then 
+$$
+\lim_{N \to \infty} S_{N}(x_{0}) 
+= \lim_{N \to \infty} \sum_{k=-N}^{N} c_{k}e^{ikx_{0}} = f(x)
+$$
+if $f$ is [[Continuity|continuous]] at $x_{0}$, then the Fourier Sum is [[Pointwise and Uniform Convergence#Definition (Pointwise Convergence)|pointwise convergent]] on $x_{0}$.
+
+# Lemma (Upgrade Fourier Sum)
+Since 
+$$
+2\pi \sum_{k=-N}^{N} c_{k}\ovl{c_{k}} \leq \int_{-\pi}^{\pi} |f|^{2} dx
+$$
+then 
+$$
+2\pi \sum_{k=-\infty}^{\infty} c_{k}\ovl{c_{k}} \leq \int_{-\pi}^{\pi} |f|^{2} dx
+$$

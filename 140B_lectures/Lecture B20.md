@@ -5,3 +5,4 @@ tags:
   - 140B
 ---
 [[Fourier Series]]
+[[Parseval's Theorem]]
