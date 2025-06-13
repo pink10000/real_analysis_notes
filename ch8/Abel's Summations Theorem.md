@@ -4,9 +4,9 @@ tags:
   - ch8
 ---
 # Theorem (Abel's Summations)
-if $\sum_{n=0}^{\infty} c_{n}x^{n}$ converges at (WLOG, let the center $x = 0$) the end point of the interval of convergence, then the power series can be extended continuously by to the end point. 
+If $\sum_{n=0}^{\infty} c_{n}x^{n}$ converges at (WLOG, let the center $x = 0$) the end point of the interval of convergence, then the power series can be extended continuously to the end point. 
 
-For example, *if* the interval of convergence is $(-R, R)$ is converges at $x = R$, *then* the function $f(x) = \sum_{n=0}^{\infty} c_{n}x^{n}$ can be *extended continuously* to include that end point. This means 
+For example, *if* the interval of convergence is $(-R, R)$ and converges at $x = R$, *then* the function $f(x) = \sum_{n=0}^{\infty} c_{n}x^{n}$ can be *extended continuously* to include that end point. This means 
 $$
 \lim_{x \to R^{-}}f(x) = \sum_{n=0}^{\infty} c_{n}R^{n}
 $$

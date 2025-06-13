@@ -65,12 +65,14 @@ $$
 |f_{n}(x) - f_{n}(y) | < \vepsi/3
 $$
 for all $n \in \N$. Since $K$ is compact, there $\exists$ finite $x_{1}, \ldots, x_{n}\in K$ such that $\forall y \in K, \exists 1 \leq i \leq n$ where $d(y, x_{i}) <\delta$. So, $\forall y \in K$,
-$$\begin{aligned}
+$$
+\begin{aligned}
 |f_{n}(y)|
 &\leq |f_{n}(x_{i})| + |f_{n}(x_{i}) - f_{n}(y)| \\
 &\leq \sup|f_{n}(x_{i})| + \vepsi/3 \\ 
 &\leq M + \vepsi/3
-\end{aligned}$$
+\end{aligned}
+$$
 and so $\{f_{n}\}$ is uniformly bounded. 
 
 **Part 2:**
@@ -89,7 +91,8 @@ $$
 for $1 \leq i \leq r$. Since there are finite points $z_i$, let $N = \max_{1 \leq i \leq r} N_{i}$. We can repeat the same symbolic argument but with $N$ instead of $N_{i}$. 
 
 Using our $\delta-$web, $\forall y \in K, \exists 1 \leq i \leq r$ such that $d(y, z_{i}) < \delta$ where
-$$\begin{aligned}
+$$
+\begin{aligned}
 |g_{n}(y) - g_{m}(y)|
 &\leq 
 \underbrace{|g_{n}(y) - g_{n}(z_{i})|}_{\text{by equicontinuity}}
@@ -97,7 +100,8 @@ $$\begin{aligned}
 + \underbrace{|g_{m}(z_{i}) - g_{m}(y)|}_{\text{by equicontinuity}} \\
 &\leq \vepsi/3 + \vepsi/3 + \vepsi \\
 &= \vepsi
-\end{aligned}$$
+\end{aligned}
+$$
 And so by the [[Pointwise and Uniform Convergence#Criterion 2 (Cauchy Criterion)|Cauchy Criterion]], $g_{n}$ uniformly converges. 
 > Uniform boundedness + equicontinuous = uniformly convergent subsequence
 > This is like a compactness condition. This theorem is similar to [[Continuity#Theorem (Continuity + Compact = Uniform Continuity)]]. 
