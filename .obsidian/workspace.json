@@ -30,20 +30,6 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
-          },
-          {
-            "id": "9469d42207e6992c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ch7/Uniform Convergence and Integration.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Uniform Convergence and Integration"
-            }
           }
         ],
         "currentTab": 1
@@ -305,7 +291,10 @@
   },
   "active": "85627f50143f62e3",
   "lastOpenFiles": [
+    "ch5/Complex Functions.md",
+    "ch6/Fundamental Theorem of Calculus.md",
     "ch7/Uniform Convergence and Integration.md",
+    "ch4/Limits at Infinity.md",
     "ch7/Equicontinuity.md",
     "ch8/Abel's Summations Theorem.md",
     "ch8/Parseval's Theorem.md",
@@ -324,14 +313,11 @@
     "ch7/Uniform Convergence and Differentiation.md",
     "ch2/Compact Sets.md",
     "ch4/Continuity.md",
-    "ch6/Fundamental Theorem of Calculus.md",
     "ch3/Sequences.md",
     "ch8/Pointwise Convergence of the Fourier Series.md",
     "ch8/Hilbert Space.md",
     "ch8",
     "140B_lectures/Discussion B1.md",
-    "140B_lectures/Lecture B16.md",
-    "ch6/Riemann-Stieltjes Integral.md",
     "ch7",
     "Pasted image 20250421125627.png",
     "ch6",
