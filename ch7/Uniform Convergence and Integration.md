@@ -27,3 +27,4 @@ $$
 \int_{a}^{b} (f_{n}(x) + \vepsi) d\alpha
 $$
 such that RHS - LHS = $2 \vepsi (\alpha(b) - \alpha(a))$. 
+> Related, [[Riemann-Stieltjes Integral]], [[Pointwise and Uniform Convergence]]. 

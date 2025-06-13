@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "-Lecture",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -33,5 +33,5 @@
   "linkStrength": 1,
   "linkDistance": 142,
   "scale": 1.064536076920779,
-  "close": true
+  "close": false
 }
